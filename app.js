@@ -98,13 +98,19 @@ map.on("load", () => {
 				const coords = e.features[0].geometry.coordinates;
 
 				if (isMobile) {
-					// show bottom card
-					document.getElementById("card-title").textContent =
-						props["Project title"];
-					document.getElementById("card-amount").textContent =
-						props["Amount ARPA obligated"];
-					document.getElementById("card-percent").textContent =
-						props["% ARPA spent by 24"];
+					const title = props["Project title"];
+					const amount = props["Amount ARPA obligated"];
+					const spent = props["% ARPA spent by 24"];
+					// build your narrative
+					const narrative =
+						`Roanoke obligated $${amount} of its ARPA funds to this project. ` +
+						`By the end of 2024, it had spent ${spent} of that amount.`;
+
+					// populate
+					document.getElementById("card-title").textContent = title;
+					document.getElementById("card-narrative").textContent = narrative;
+
+					// show card
 					document.getElementById("project-card").classList.add("visible");
 
 					// remove desktop popup if open
@@ -118,14 +124,20 @@ map.on("load", () => {
 
 					// show desktop popup
 					if (desktopPopup) desktopPopup.remove();
+
+					const amount = props["Amount ARPA obligated"];
+					const spent = props["% ARPA spent by 24"];
+					const narrative =
+						`Roanoke obligated $${amount} of its ARPA funds to this project. ` +
+						`By the end of 2024, it had spent ${spent} of that amount.`;
+
 					const html = `
-            <div class="project-popup">
-              <h3>${props["Project title"]}</h3>
-              <p><strong>Amount ARPA obligated:</strong>
-                 ${props["Amount ARPA obligated"]}</p>
-              <p><strong>% ARPA spent by 24:</strong>
-                 ${props["% ARPA spent by 24"]}</p>
-            </div>`;
+						<div class="project-popup">
+						<h3>${props["Project title"]}</h3>
+						<hr class="popup-divider" />
+						<p>${narrative}</p>
+						</div>`;
+
 					desktopPopup = new maptilersdk.Popup({
 						offset: [-15, 15],
 						closeButton: false,
