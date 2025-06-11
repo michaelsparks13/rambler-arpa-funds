@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roanoke ARPA Funds Map</title>
+    <script src="https://cdn.maptiler.com/maptiler-sdk-js/v3.2.0/maptiler-sdk.umd.min.js" defer></script>
+    <link href="https://cdn.maptiler.com/maptiler-sdk-js/v3.2.0/maptiler-sdk.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Roanoke ARPA Funds Map</h1>
+    </header>
+
+    <main>
+        <section aria-label="Map">
+            <div id="map"></div>
+        </section>
+
+        <!-- Mobile project card -->
+        <section id="project-card" class="project-card" aria-hidden="true">
+            <button id="close-card" class="close-card" aria-label="Close project details">&times;</button>
+            <h2 id="card-title"></h2>
+            <p><strong>Amount ARPA obligated:</strong> <span id="card-amount"></span></p>
+            <p><strong>% ARPA spent by 24:</strong> <span id="card-percent"></span></p>
+        </section>
+
+        <!-- City-wide pull-up panel -->
+        <section id="city-wide-panel" class="city-wide-panel" aria-label="City-wide projects">
+            <div class="panel-handle" role="button" tabindex="0" aria-expanded="false">
+                <span class="arrow">&#9650;</span>
+                <h2 class="panel-title">City-wide projects</h2>
+            </div>
+            <div class="panel-content" id="city-wide-container" tabindex="0">
+                <!-- JS will inject each <article class="city-card"> here -->
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,571 @@
+{
+	"type": "FeatureCollection",
+	"name": "data",
+	"crs": {
+		"type": "name",
+		"properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
+	},
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": "Admin costs for employees working on ARPA grants",
+				"Amount ARPA obligated": "11,399,055.97",
+				"Amount city funds budgeted": null,
+				"ARPA spent by end of 24?": "405,560.82",
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "3.56%",
+				"Lat": "37.270904333316300",
+				"Lon": "-79.944793830000000",
+				"Building": "City of Roanoke Municipal Building"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-79.94479383, 37.270904333316302]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": "Market on Melrose",
+				"Amount ARPA obligated": "10,000,000.00",
+				"Amount city funds budgeted": "0",
+				"ARPA spent by end of 24?": "10,000,000.00",
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "100.00%",
+				"Lat": "37.285798294596700",
+				"Lon": "-79.977637227845800",
+				"Building": null
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-79.977637227845804, 37.285798294596702]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": "Eureka Park Rec Center",
+				"Amount ARPA obligated": "8,000,000.00",
+				"Amount city funds budgeted": "TK",
+				"ARPA spent by end of 24?": "3,449,854.20",
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "43.12%",
+				"Lat": "37.288119643217300",
+				"Lon": "-79.960550279882800",
+				"Building": null
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-79.960550279882796, 37.2881196432173]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": "Habitat for Humanity",
+				"Amount ARPA obligated": "4,238,294.34",
+				"Amount city funds budgeted": null,
+				"ARPA spent by end of 24?": "4,238,294.34",
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "100.00%",
+				"Lat": "37.270828596072600",
+				"Lon": "-79.927788592817700",
+				"Building": null
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-79.927788592817706, 37.270828596072597]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": "Revenue replacement",
+				"Amount ARPA obligated": "4,054,308.47",
+				"Amount city funds budgeted": null,
+				"ARPA spent by end of 24?": "3,929,786.47",
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "96.93%",
+				"Lat": null,
+				"Lon": null,
+				"Building": null
+			},
+			"geometry": null
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": "Kayak park",
+				"Amount ARPA obligated": "3,129,391.00",
+				"Amount city funds budgeted": "TK",
+				"ARPA spent by end of 24?": "374,218.35",
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "11.96%",
+				"Lat": "37.267512214849500",
+				"Lon": "-79.963292361390200",
+				"Building": null
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-79.963292361390202, 37.267512214849503]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": "HOME ARP",
+				"Amount ARPA obligated": "2,873,108.81",
+				"Amount city funds budgeted": null,
+				"ARPA spent by end of 24?": "2,098,162.52",
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "73.03%",
+				"Lat": null,
+				"Lon": null,
+				"Building": null
+			},
+			"geometry": null
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": "LEAP food hub",
+				"Amount ARPA obligated": "2,500,000.00",
+				"Amount city funds budgeted": null,
+				"ARPA spent by end of 24?": "2,500,000.00",
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "100.00%",
+				"Lat": "37.272213250523200",
+				"Lon": "-79.960280999621400",
+				"Building": null
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-79.960280999621403, 37.272213250523201]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": "Gainsboro neighborhood hub",
+				"Amount ARPA obligated": "2,341,075.13",
+				"Amount city funds budgeted": null,
+				"ARPA spent by end of 24?": "41,000.00",
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "1.75%",
+				"Lat": "37.277815992665700",
+				"Lon": "-79.941662252171900",
+				"Building": null
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-79.941662252171895, 37.277815992665701]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": "MetroFLX",
+				"Amount ARPA obligated": "2,245,243.34",
+				"Amount city funds budgeted": null,
+				"ARPA spent by end of 24?": "1,915,673.82",
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "85.32%",
+				"Lat": null,
+				"Lon": null,
+				"Building": null
+			},
+			"geometry": null
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": "Outdoor park maintenance",
+				"Amount ARPA obligated": "1,968,788.14",
+				"Amount city funds budgeted": null,
+				"ARPA spent by end of 24?": "1,936,528.61",
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "98.36%",
+				"Lat": null,
+				"Lon": null,
+				"Building": null
+			},
+			"geometry": null
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": "GRWDB Star City Works project",
+				"Amount ARPA obligated": "1,816,179.35",
+				"Amount city funds budgeted": null,
+				"ARPA spent by end of 24?": "1,816,179.35",
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "100.00%",
+				"Lat": null,
+				"Lon": null,
+				"Building": null
+			},
+			"geometry": null
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": "Creating NW and SE leaders",
+				"Amount ARPA obligated": "1,652,839.75",
+				"Amount city funds budgeted": null,
+				"ARPA spent by end of 24?": "0.00",
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "0.00%",
+				"Lat": null,
+				"Lon": null,
+				"Building": null
+			},
+			"geometry": null
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": "Gun violence related initiatives, inc PD overtime",
+				"Amount ARPA obligated": "1,651,063.36",
+				"Amount city funds budgeted": null,
+				"ARPA spent by end of 24?": "1,622,564.31",
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "98.27%",
+				"Lat": "37.271074355410500",
+				"Lon": "-79.947623583229200",
+				"Building": "Roanoke City Police Department"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-79.947623583229202, 37.271074355410498]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": "Downtown parking facility maintenance",
+				"Amount ARPA obligated": "884,442.50",
+				"Amount city funds budgeted": null,
+				"ARPA spent by end of 24?": "587,317.50",
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "66.41%",
+				"Lat": "37.271892228098500",
+				"Lon": "-79.940557865169300",
+				"Building": null
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-79.940557865169296, 37.271892228098501]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": "VTC Lab support",
+				"Amount ARPA obligated": "755,000.00",
+				"Amount city funds budgeted": null,
+				"ARPA spent by end of 24?": "755,000.00",
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "100.00%",
+				"Lat": "37.263781969666000",
+				"Lon": "-79.941002394778900",
+				"Building": "VTC"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-79.941002394778906, 37.263781969665999]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": "Arts and culture grants",
+				"Amount ARPA obligated": "580,500.00",
+				"Amount city funds budgeted": null,
+				"ARPA spent by end of 24?": "580,500.00",
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "100.00%",
+				"Lat": null,
+				"Lon": null,
+				"Building": null
+			},
+			"geometry": null
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": "TAP acquire, rehab for permanent support housing",
+				"Amount ARPA obligated": "570,685.00",
+				"Amount city funds budgeted": null,
+				"ARPA spent by end of 24?": "570,685.00",
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "100.00%",
+				"Lat": "37.270788452638400",
+				"Lon": "-79.927902020806700",
+				"Building": "TAP"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-79.927902020806698, 37.270788452638399]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": "Cash transfer to households for utility bills",
+				"Amount ARPA obligated": "497,043.21",
+				"Amount city funds budgeted": null,
+				"ARPA spent by end of 24?": "497,043.21",
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "100.00%",
+				"Lat": null,
+				"Lon": null,
+				"Building": null
+			},
+			"geometry": null
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": "Grants for substance abuse",
+				"Amount ARPA obligated": "445,100.00",
+				"Amount city funds budgeted": null,
+				"ARPA spent by end of 24?": "445,100.00",
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "100.00%",
+				"Lat": null,
+				"Lon": null,
+				"Building": null
+			},
+			"geometry": null
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": "Nonprofits grant support",
+				"Amount ARPA obligated": "410,500.00",
+				"Amount city funds budgeted": null,
+				"ARPA spent by end of 24?": "410,500.00",
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "100.00%",
+				"Lat": null,
+				"Lon": null,
+				"Building": null
+			},
+			"geometry": null
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": "Permanent supportive housing for homeless",
+				"Amount ARPA obligated": "390,600.00",
+				"Amount city funds budgeted": null,
+				"ARPA spent by end of 24?": "390,600.00",
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "100.00%",
+				"Lat": "37.310967692290200",
+				"Lon": "-79.964428509223100",
+				"Building": "Commonwealth Catholic Charities "
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-79.964428509223097, 37.310967692290198]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": "EDA small business grants",
+				"Amount ARPA obligated": "370,000.00",
+				"Amount city funds budgeted": null,
+				"ARPA spent by end of 24?": "370,000.00",
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "100.00%",
+				"Lat": null,
+				"Lon": null,
+				"Building": null
+			},
+			"geometry": null
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": "DRI ambassador program",
+				"Amount ARPA obligated": "300,000.00",
+				"Amount city funds budgeted": null,
+				"ARPA spent by end of 24?": "300,000.00",
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "100.00%",
+				"Lat": "37.271877765081600",
+				"Lon": "-79.940540002296900",
+				"Building": "DRI"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-79.940540002296899, 37.271877765081598]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": "Financial Empowerment Center",
+				"Amount ARPA obligated": "268,887.03",
+				"Amount city funds budgeted": null,
+				"ARPA spent by end of 24?": "268,887.00",
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "100.00%",
+				"Lat": null,
+				"Lon": null,
+				"Building": "Freedom First"
+			},
+			"geometry": null
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": "Collective Response direct funding",
+				"Amount ARPA obligated": "250,000.00",
+				"Amount city funds budgeted": null,
+				"ARPA spent by end of 24?": "250,000.00",
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "100.00%",
+				"Lat": null,
+				"Lon": null,
+				"Building": "RVARC"
+			},
+			"geometry": null
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": "Tree planting",
+				"Amount ARPA obligated": "230,609.00",
+				"Amount city funds budgeted": null,
+				"ARPA spent by end of 24?": "215,104.99",
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "93.28%",
+				"Lat": null,
+				"Lon": null,
+				"Building": "City wide"
+			},
+			"geometry": null
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": "Jefferson Center HVAC",
+				"Amount ARPA obligated": "150,000.00",
+				"Amount city funds budgeted": null,
+				"ARPA spent by end of 24?": "150,000.00",
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "100.00%",
+				"Lat": "37.270583826796000",
+				"Lon": "-79.951868475833700",
+				"Building": "Jefferson Center"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-79.951868475833706, 37.270583826795999]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": "Center in the Square HVAC",
+				"Amount ARPA obligated": "124,000.00",
+				"Amount city funds budgeted": null,
+				"ARPA spent by end of 24?": "124,000.00",
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "100.00%",
+				"Lat": "37.271430559663700",
+				"Lon": "-79.939623164705400",
+				"Building": "Center in the Square"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-79.939623164705395, 37.271430559663699]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": "Taubman Museum tech for greater spacing",
+				"Amount ARPA obligated": "75,700.00",
+				"Amount city funds budgeted": null,
+				"ARPA spent by end of 24?": "75,700.00",
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "100.00%",
+				"Lat": "37.272798929381900",
+				"Lon": "-79.938281423595300",
+				"Building": "Taubman Museum"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-79.938281423595299, 37.272798929381899]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": "Grandin Theatre HVAC",
+				"Amount ARPA obligated": "68,500.00",
+				"Amount city funds budgeted": null,
+				"ARPA spent by end of 24?": "68,500.00",
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "100.00%",
+				"Lat": "37.265460297653400",
+				"Lon": "-79.976936758187000",
+				"Building": "Grandin Theatre"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-79.976936758186994, 37.265460297653398]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": "Employee health clinic overtime",
+				"Amount ARPA obligated": "29,250.00",
+				"Amount city funds budgeted": null,
+				"ARPA spent by end of 24?": "29,250.00",
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "100.00%",
+				"Lat": null,
+				"Lon": null,
+				"Building": "Marathon Health"
+			},
+			"geometry": null
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": "Grants to cultural orgs for facility upgrades",
+				"Amount ARPA obligated": "25,000.00",
+				"Amount city funds budgeted": null,
+				"ARPA spent by end of 24?": "25,000.00",
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "100.00%",
+				"Lat": null,
+				"Lon": null,
+				"Building": null
+			},
+			"geometry": null
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": null,
+				"Amount ARPA obligated": "64,295,164.40",
+				"Amount city funds budgeted": null,
+				"ARPA spent by end of 24?": "40,441,010.49",
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "62.90%",
+				"Lat": null,
+				"Lon": null,
+				"Building": null
+			},
+			"geometry": null
+		}
+	]
+}
