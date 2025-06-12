@@ -155,7 +155,8 @@ map.on("load", () => {
 									</div>
 									</div>
 									<div class="details-tab">
-									<span class="arrow">→</span> DETAILS 
+										<span class="details-label">DETAILS</span>
+										<span class="arrow">→</span>
 									</div>
 								</div>`;
 
