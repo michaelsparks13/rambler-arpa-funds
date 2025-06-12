@@ -258,6 +258,28 @@ a, .panel-handle .panel-title {
     padding: 1rem;
   }
 
+   /* ensure padding is included in the flex‐item width */
+  .project-popup .popup-page.page-main {
+    box-sizing: border-box;
+    /* top | right  | bottom | left */
+    padding: 1rem 3rem 1rem 1rem !important;
+  }
+
+  /* (optional) bump the popup container a bit wider so text never collides */
+  .maptilersdk-popup .project-popup {
+    width: 350px;          /* adjust up/down as you like */
+    max-width: 90vw;
+  }
+
+  .popup-page.page-details img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;    /* crops if it’s not square */
+    border-radius: 4px;    /* optional rounding */
+    display: block;
+    margin: 0 auto 1rem;  /* center and add bottom spacing */
+  }
+
   /* 2. toggled state: slide to page-2 */
   .project-popup.show-details .popup-pages {
     transform: translateX(-50%);
@@ -268,18 +290,90 @@ a, .panel-handle .panel-title {
     position: absolute;
     top: 50%;
     right: 0;
-    transform: translateY(-50%);
-    writing-mode: vertical-rl;
-    text-orientation: upright;
+    /* remove writing‐mode/text‐orientation */
+    writing-mode: horizontal-tb;
+    text-orientation: initial;
+    /* translate up by half its height, then rotate 90° */
+    transform: translateY(-50%) rotate(-90deg);
+    /* pivot from its center */
+    transform-origin: center center;
     cursor: pointer;
     font-weight: bold;
     padding: 0.5rem;
     user-select: none;
   }
+
   .details-tab .arrow {
     display: block;
     margin-top: 0.25rem;
   }
+
+  .popup-page.page-details {
+    display: flex;
+    flex-direction: column;
+    height: 100%;       /* match the popup’s current height */
+    overflow-y: auto;   /* scroll the content inside */
+  }
+
+  /* 2. Stretch the image to fill the pane’s width */
+  .popup-page.page-details img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    flex-shrink: 0;     /* don’t let the img shrink as you scroll */
+    margin-bottom: 0.5rem;
+  }
+
+  /* 3. Ensure your paragraph sits below the image */
+  .popup-page.page-details p {
+    margin: 0 1rem 1rem; /* horizontal padding + bottom space */
+    line-height: 1.4;
+  }
+
+  /* 1. Force every desktop popup to a uniform height */
+.maptilersdk-popup .project-popup {
+  height: 400px;       /* pick whatever works best for your layout */
+  max-height: 90vh;    /* optional cap so it never exceeds the viewport */
 }
+
+/* 2. Make the pages fill that height */
+.popup-pages,
+.popup-page {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* 3. Always enable scrolling on page-2 */
+.popup-page.page-details {
+  overflow-y: auto;
+  /* if you want a little inner padding: */
+  padding: 1rem;
+}
+
+
+}
+
+/* Hide the Mapbox/MapLibre popup wrapper and its default content box */
+.mapboxgl-popup,
+.maplibregl-popup {
+  background: transparent !important;
+  box-shadow: none      !important;
+  padding: 0            !important;
+}
+
+/* Hide the built-in content container so only your .project-popup shows */
+.mapboxgl-popup-content,
+.maplibregl-popup-content {
+  background: transparent !important;
+  box-shadow: none      !important;
+  padding: 0            !important;
+  border: none          !important;
+}
+
+/* Remove the little arrow tip
+.mapboxgl-popup-tip,
+.maplibregl-popup-tip {
+  display: none !important;
+} */
 
 

@@ -150,12 +150,12 @@ map.on("load", () => {
 									</div>
 									<!-- PAGE 2 -->
 									<div class="popup-page page-details">
-										<img src="${props["Image URL"] || ""}" alt="${props["Project title"]}" />
-										<p>${props["Project description"] || ""}</p>
+										<img src="janeson-keeley-xxyrh3fzYJg-unsplash.jpg" alt="${props["Project title"]}" />
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec quam vitae lectus mollis semper. Sed vulputate nibh vitae purus feugiat, ac scelerisque justo sollicitudin. Integer luctus risus vel felis lacinia, sed varius odio feugiat. Sed fringilla.</p>
 									</div>
 									</div>
 									<div class="details-tab">
-									DETAILS <span class="arrow">→</span>
+									<span class="arrow">→</span> DETAILS 
 									</div>
 								</div>`;
 
@@ -168,13 +168,22 @@ map.on("load", () => {
 						.setHTML(html)
 						.addTo(map);
 
-					// Grab the popup’s root element
+					// ─── Grab your popup elements ──────────────────────────────────────
 					const popupEl = desktopPopup
 						.getElement()
 						.querySelector(".project-popup");
-					const tab = popupEl.querySelector(".details-tab");
+					const mainPage = popupEl.querySelector(".popup-page.page-main");
+					const detailsPage = popupEl.querySelector(".popup-page.page-details");
 
-					// When clicked, slide pages and flip the arrow
+					// ─── Lock the popup height to page‐1 and make page‐2 scrollable ───
+					const pageHeight = mainPage.getBoundingClientRect().height;
+					popupEl.style.height = `${pageHeight}px`;
+					detailsPage.style.maxHeight = `${pageHeight}px`;
+					detailsPage.style.overflowY = "auto";
+					detailsPage.style.webkitOverflowScrolling = "touch";
+
+					// ─── Now wire up the DETAILS tab ─────────────────────────────────
+					const tab = popupEl.querySelector(".details-tab");
 					tab.addEventListener("click", () => {
 						popupEl.classList.toggle("show-details");
 						const arrow = tab.querySelector(".arrow");
