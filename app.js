@@ -116,6 +116,16 @@ map.on("load", () => {
 					document.getElementById("card-title").textContent = title;
 					document.getElementById("card-narrative").innerHTML = narrative;
 
+
+					// FILL the image
+					const imgEl = document.getElementById("card-image");
+					imgEl.src = "janeson-keeley-xxyrh3fzYJg-unsplash.jpg";
+					imgEl.alt = title;
+
+					// FILL the long text
+					document.getElementById("card-details").textContent =
+						"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio ipsum. Suspendisse cursus malesuada facilisis. Nunc consectetur purus at metus ultricies, et volutpat turpis semper. Donec vitae massa sit amet lacus tincidunt varius.";
+
 					// show card
 					document.getElementById("project-card").classList.add("visible");
 
@@ -215,13 +225,13 @@ map.on("load", () => {
 		})
 		.catch((err) => console.error(err));
 
-	// Mobile card close‐button
-	document.getElementById("close-card").addEventListener("click", () => {
-		// hide the project card
-		document.getElementById("project-card").classList.remove("visible");
-		// re-show the city-wide pull-up panel
-		document.getElementById("city-wide-panel").classList.remove("hidden");
-	});
+		// Mobile card close‐button
+		document.getElementById("close-card").addEventListener("click", () => {
+			// hide the project card
+			document.getElementById("project-card").classList.remove("visible");
+			// re-show the city-wide pull-up panel
+			document.getElementById("city-wide-panel").classList.remove("hidden");
+		});
 
 	// Pull-up panel handle toggle
 	const panel = document.getElementById("city-wide-panel");
