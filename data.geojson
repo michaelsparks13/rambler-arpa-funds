@@ -551,21 +551,7 @@
 				"Building": null
 			},
 			"geometry": null
-		},
-		{
-			"type": "Feature",
-			"properties": {
-				"Project title": null,
-				"Amount ARPA obligated": "64,295,164.40",
-				"Amount city funds budgeted": null,
-				"ARPA spent by end of 24?": "40,441,010.49",
-				"City fund sent by end of 24": null,
-				"% ARPA spent by 24": "62.90%",
-				"Lat": null,
-				"Lon": null,
-				"Building": null
-			},
-			"geometry": null
 		}
+		
 	]
 }

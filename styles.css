@@ -228,6 +228,8 @@ a, .panel-handle .panel-title {
 }
 
 
+
+
 /* ——————————————————————
    Prevent any page‐level scrolling on mobile
    —————————————————————— */
@@ -236,4 +238,48 @@ a, .panel-handle .panel-title {
     overflow: hidden;
   }
 }
+
+/* === Two-page slider CSS === */
+@media (min-width: 768px) {
+  /* 1. container & sliding panels */
+  .project-popup {
+    position: relative;
+    overflow: hidden;
+    width: 300px;              /* match your popup’s width */
+  }
+  .popup-pages {
+    display: flex;
+    width: 200%;               /* two panels side by side */
+    transform: translateX(0);
+    transition: transform .3s ease;
+  }
+  .popup-page {
+    flex: 0 0 50%;             /* each panel takes half of the 200% width */
+    padding: 1rem;
+  }
+
+  /* 2. toggled state: slide to page-2 */
+  .project-popup.show-details .popup-pages {
+    transform: translateX(-50%);
+  }
+
+  /* 3. vertical DETAILS tab */
+  .details-tab {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0.5rem;
+    user-select: none;
+  }
+  .details-tab .arrow {
+    display: block;
+    margin-top: 0.25rem;
+  }
+}
+
 

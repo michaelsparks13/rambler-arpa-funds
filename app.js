@@ -81,7 +81,7 @@ map.on("load", () => {
 					card.innerHTML = `
             <h3>${props["Project title"]}</h3>
             <p><strong>Amount ARPA obligated:</strong>
-               ${props["Amount ARPA obligated"]}</p>
+               $${props["Amount ARPA obligated"]}</p>
           `;
 					cityContainer.appendChild(card);
 				});
@@ -101,13 +101,12 @@ map.on("load", () => {
 				const coords = e.features[0].geometry.coordinates;
 
 				if (isMobile) {
-
 					panel.classList.add("hidden");
 
 					const title = props["Project title"];
 					const amount = props["Amount ARPA obligated"];
 					const spent = props["% ARPA spent by 24"];
-					
+
 					// build your narrative
 					const narrative =
 						`Roanoke obligated <span class="narrative-highlight">$${amount}</span> of its ARPA funds to this project. ` +
@@ -141,12 +140,24 @@ map.on("load", () => {
 						`By the end of 2024, it had spent <span class="narrative-highlight">${spent}</span> of that amount.`;
 
 					const html = `
-					<div class="project-popup">
-						<h3>${props["Project title"]}</h3>
-						<hr class="popup-divider" />
-						<p>${narrative}</p>
-					</div>`;
-
+								<div class="project-popup">
+									<div class="popup-pages">
+									<!-- PAGE 1 -->
+									<div class="popup-page page-main">
+										<h3>${props["Project title"]}</h3>
+										<hr class="popup-divider" />
+										<p>${narrative}</p>
+									</div>
+									<!-- PAGE 2 -->
+									<div class="popup-page page-details">
+										<img src="${props["Image URL"] || ""}" alt="${props["Project title"]}" />
+										<p>${props["Project description"] || ""}</p>
+									</div>
+									</div>
+									<div class="details-tab">
+									DETAILS <span class="arrow">→</span>
+									</div>
+								</div>`;
 
 					desktopPopup = new maptilersdk.Popup({
 						offset: [-1, -5],
@@ -156,7 +167,22 @@ map.on("load", () => {
 						.setLngLat(coords)
 						.setHTML(html)
 						.addTo(map);
-				}
+
+					// Grab the popup’s root element
+					const popupEl = desktopPopup
+						.getElement()
+						.querySelector(".project-popup");
+					const tab = popupEl.querySelector(".details-tab");
+
+					// When clicked, slide pages and flip the arrow
+					tab.addEventListener("click", () => {
+						popupEl.classList.toggle("show-details");
+						const arrow = tab.querySelector(".arrow");
+						arrow.textContent = popupEl.classList.contains("show-details")
+							? "←"
+							: "→";
+					});
+				} // end mobile-desktop if else
 			});
 
 			// Outside‐click closes card or popup
