@@ -39,15 +39,15 @@ map.on("load", () => {
 						["linear"],
 						["get", "amount"],
 						25000,
-						4,
+						12,
 						250000,
-						6,
-						1000000,
-						10,
-						3000000,
 						16,
-						8000000,
+						1000000,
+						20,
+						3000000,
 						24,
+						8000000,
+						28,
 						11399055.97,
 						32,
 					],
@@ -91,24 +91,31 @@ map.on("load", () => {
 				document.getElementById("project-card").style.display = "none";
 			}
 
+			const panel = document.getElementById("city-wide-panel");
+
 			// Unified click handler on circles
 			let desktopPopup;
+
 			map.on("click", "arpa-funds-circle", (e) => {
 				const props = e.features[0].properties;
 				const coords = e.features[0].geometry.coordinates;
 
 				if (isMobile) {
+
+					panel.classList.add("hidden");
+
 					const title = props["Project title"];
 					const amount = props["Amount ARPA obligated"];
 					const spent = props["% ARPA spent by 24"];
+					
 					// build your narrative
 					const narrative =
-						`Roanoke obligated $${amount} of its ARPA funds to this project. ` +
-						`By the end of 2024, it had spent ${spent} of that amount.`;
+						`Roanoke obligated <span class="narrative-highlight">$${amount}</span> of its ARPA funds to this project. ` +
+						`By the end of 2024, it had spent <span class="narrative-highlight">${spent}</span> of that amount.`;
 
 					// populate
 					document.getElementById("card-title").textContent = title;
-					document.getElementById("card-narrative").textContent = narrative;
+					document.getElementById("card-narrative").innerHTML = narrative;
 
 					// show card
 					document.getElementById("project-card").classList.add("visible");
@@ -127,19 +134,22 @@ map.on("load", () => {
 
 					const amount = props["Amount ARPA obligated"];
 					const spent = props["% ARPA spent by 24"];
+
+					// build narrative with highlight spans
 					const narrative =
-						`Roanoke obligated $${amount} of its ARPA funds to this project. ` +
-						`By the end of 2024, it had spent ${spent} of that amount.`;
+						`Roanoke obligated <span class="narrative-highlight">$${amount}</span> of its ARPA funds to this project. ` +
+						`By the end of 2024, it had spent <span class="narrative-highlight">${spent}</span> of that amount.`;
 
 					const html = `
-						<div class="project-popup">
+					<div class="project-popup">
 						<h3>${props["Project title"]}</h3>
 						<hr class="popup-divider" />
 						<p>${narrative}</p>
-						</div>`;
+					</div>`;
+
 
 					desktopPopup = new maptilersdk.Popup({
-						offset: [-15, 15],
+						offset: [-1, -5],
 						closeButton: false,
 						closeOnClick: true,
 					})
@@ -157,6 +167,7 @@ map.on("load", () => {
 				if (isMobile) {
 					if (hits.length === 0) {
 						document.getElementById("project-card").classList.remove("visible");
+						panel.classList.remove("hidden");
 					}
 				} else {
 					if (hits.length === 0 && desktopPopup) {
@@ -170,7 +181,10 @@ map.on("load", () => {
 
 	// Mobile card close‐button
 	document.getElementById("close-card").addEventListener("click", () => {
+		// hide the project card
 		document.getElementById("project-card").classList.remove("visible");
+		// re-show the city-wide pull-up panel
+		document.getElementById("city-wide-panel").classList.remove("hidden");
 	});
 
 	// Pull-up panel handle toggle
