@@ -9,15 +9,20 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"Project title": "Admin costs for employees working on ARPA grants",
+				"Project title": "Salaries for city employees working on ARPA grants",
+				"Description": "The U.S. Treasury allows cities to use ARPA funds to cover costs to administer ARPA projects.",
 				"Amount ARPA obligated": "11,399,055.97",
+				"ARPA funds narrative": "11.4 million",
 				"Amount city funds budgeted": null,
+				"City funds narrative": null,
 				"ARPA spent by end of 24?": "405,560.82",
-				"City fund sent by end of 24": null,
-				"% ARPA spent by 24": "3.56%",
+				"Address": null,
 				"Lat": "37.270904333316300",
 				"Lon": "-79.944793830000000",
-				"Building": "City of Roanoke Municipal Building"
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "4%",
+				"image_url": "ARPA-photos/2-admin-costs.jpg",
+				"Subrecipient": null
 			},
 			"geometry": {
 				"type": "Point",
@@ -28,14 +33,19 @@
 			"type": "Feature",
 			"properties": {
 				"Project title": "Market on Melrose",
-				"Amount ARPA obligated": "10,000,000.00",
-				"Amount city funds budgeted": "0",
-				"ARPA spent by end of 24?": "10,000,000.00",
-				"City fund sent by end of 24": null,
-				"% ARPA spent by 24": "100.00%",
+				"Description": "Support went for a grocery store at Melrose Plaza, a Northwest community hub launched by Goodwill Industries of the Valleys that includes a bank, wellness center and adult high school. The city says the area is a \"food desert\" as classified by the USDA, in which more than 33% of residents live more than one mile from a full-service grocery store.",
+				"Amount ARPA obligated": "10,000,000",
+				"ARPA funds narrative": "10 million",
+				"Amount city funds budgeted": null,
+				"City funds narrative": null,
+				"ARPA spent by end of 24?": "10,000,000",
+				"Address": "2502 Melrose Ave NW, Roanoke, VA 24017",
 				"Lat": "37.285798294596700",
 				"Lon": "-79.977637227845800",
-				"Building": null
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "100%",
+				"image_url": "ARPA-photos/3-market-melrose-interior-courtesy.jpg",
+				"Subrecipient": "Goodwill"
 			},
 			"geometry": {
 				"type": "Point",
@@ -45,15 +55,20 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"Project title": "Eureka Park Rec Center",
-				"Amount ARPA obligated": "8,000,000.00",
-				"Amount city funds budgeted": "TK",
+				"Project title": "Eureka Park Recreation Center",
+				"Description": "Redevelopment of the city-owned recreation center was ranked as the highest need for improvement in the city's parks master plan.",
+				"Amount ARPA obligated": "8,000,000",
+				"ARPA funds narrative": "eight million",
+				"Amount city funds budgeted": 5000000,
+				"City funds narrative": "five million",
 				"ARPA spent by end of 24?": "3,449,854.20",
-				"City fund sent by end of 24": null,
-				"% ARPA spent by 24": "43.12%",
+				"Address": "1529 Carroll Ave NW, Roanoke, VA 24017",
 				"Lat": "37.288119643217300",
 				"Lon": "-79.960550279882800",
-				"Building": null
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "43%",
+				"image_url": "ARPA-photos/4-Eureka-Park-Rendering.jpg",
+				"Subrecipient": null
 			},
 			"geometry": {
 				"type": "Point",
@@ -63,15 +78,20 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"Project title": "Habitat for Humanity",
-				"Amount ARPA obligated": "4,238,294.34",
+				"Project title": "Affordable housing and social services",
+				"Description": "Habitat for Humanity built or rehabbed 18 homes to be affordable ($4,238,294.34). Total Action for Progress (TAP) received $570,685 to acquire and rehab homes for permanent supportive housing. Projects were focused in the Blemon-Fallon Target Area of Southeast Roanoke.",
+				"Amount ARPA obligated": "4,808,979.34",
+				"ARPA funds narrative": "4.8 million",
 				"Amount city funds budgeted": null,
-				"ARPA spent by end of 24?": "4,238,294.34",
-				"City fund sent by end of 24": null,
-				"% ARPA spent by 24": "100.00%",
+				"City funds narrative": null,
+				"ARPA spent by end of 24?": "4,808,979.34",
+				"Address": "37Â°16'14.9\"N 79Â°55'40.3\"W",
 				"Lat": "37.270828596072600",
 				"Lon": "-79.927788592817700",
-				"Building": null
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "100%",
+				"image_url": null,
+				"Subrecipient": null
 			},
 			"geometry": {
 				"type": "Point",
@@ -81,30 +101,40 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"Project title": "Revenue replacement",
+				"Project title": "Lost revenue",
+				"Description": "This funding covers many miscellaneous expenses that the city incurred as a result of the pandemic emergency. The U.S. Treasury provides a calculation but also allows cities to use $10 million for this designation without proving a loss of revenue.",
 				"Amount ARPA obligated": "4,054,308.47",
+				"ARPA funds narrative": "over 4 million",
 				"Amount city funds budgeted": null,
+				"City funds narrative": null,
 				"ARPA spent by end of 24?": "3,929,786.47",
-				"City fund sent by end of 24": null,
-				"% ARPA spent by 24": "96.93%",
+				"Address": null,
 				"Lat": null,
 				"Lon": null,
-				"Building": null
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "97%",
+				"image_url": null,
+				"Subrecipient": null
 			},
 			"geometry": null
 		},
 		{
 			"type": "Feature",
 			"properties": {
-				"Project title": "Kayak park",
-				"Amount ARPA obligated": "3,129,391.00",
-				"Amount city funds budgeted": "TK",
+				"Project title": "In-river kayak park",
+				"Description": "This project will expand outdoor recreation opportunities. The city says more people than ever sought out such opportunies during the pandemic.",
+				"Amount ARPA obligated": "3,129,391",
+				"ARPA funds narrative": "3.13 million",
+				"Amount city funds budgeted": 3032990,
+				"City funds narrative": "over three million",
 				"ARPA spent by end of 24?": "374,218.35",
-				"City fund sent by end of 24": null,
-				"% ARPA spent by 24": "11.96%",
+				"Address": "37Â°16'03.2\"N 79Â°57'47.9\"W",
 				"Lat": "37.267512214849500",
 				"Lon": "-79.963292361390200",
-				"Building": null
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "12%",
+				"image_url": "ARPA-photos/7-kayak-park-rendering.jpg",
+				"Subrecipient": null
 			},
 			"geometry": {
 				"type": "Point",
@@ -114,15 +144,20 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"Project title": "HOME ARP",
+				"Project title": "New housing for homeless people",
+				"Description": "This program will create housing units to serve those facing homelessness and provide supportive services. Homelessness numbers increased after the onset of Covid-19.",
 				"Amount ARPA obligated": "2,873,108.81",
+				"ARPA funds narrative": "2.9 million",
 				"Amount city funds budgeted": null,
+				"City funds narrative": null,
 				"ARPA spent by end of 24?": "2,098,162.52",
-				"City fund sent by end of 24": null,
-				"% ARPA spent by 24": "73.03%",
+				"Address": "CITYWIDE",
 				"Lat": null,
 				"Lon": null,
-				"Building": null
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "73%",
+				"image_url": null,
+				"Subrecipient": null
 			},
 			"geometry": null
 		},
@@ -130,14 +165,19 @@
 			"type": "Feature",
 			"properties": {
 				"Project title": "LEAP food hub",
-				"Amount ARPA obligated": "2,500,000.00",
+				"Description": "Project funding allowed the Local Environmental Agriculture Project to buy and renovate a West End hub, establishing a grocery market and expanding its food access programs.",
+				"Amount ARPA obligated": "2,500,000",
+				"ARPA funds narrative": "2.5 million",
 				"Amount city funds budgeted": null,
-				"ARPA spent by end of 24?": "2,500,000.00",
-				"City fund sent by end of 24": null,
-				"% ARPA spent by 24": "100.00%",
+				"City funds narrative": null,
+				"ARPA spent by end of 24?": "2,500,000",
+				"Address": "1027 Patterson Ave SW, Roanoke, VA 24016",
 				"Lat": "37.272213250523200",
 				"Lon": "-79.960280999621400",
-				"Building": null
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "100%",
+				"image_url": "ARPA-photos/9-leap-store.jpg",
+				"Subrecipient": "LEAP"
 			},
 			"geometry": {
 				"type": "Point",
@@ -147,15 +187,20 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"Project title": "Gainsboro neighborhood hub",
-				"Amount ARPA obligated": "2,341,075.13",
-				"Amount city funds budgeted": null,
-				"ARPA spent by end of 24?": "41,000.00",
-				"City fund sent by end of 24": null,
-				"% ARPA spent by 24": "1.75%",
+				"Project title": "Gainsboro neighborhood upgrades",
+				"Description": "Neighborhood upgrades will add bike lanes and pedestrian crossing signals to Gainsboro Road; provide homeowner improvement grants; and create a playground and public space. The city notes the neighborhood was ravaged by urban renewal and, as a low-income area, has been disproportionately impacted by the pandemic. Initial plans for a health clinic and small business development center in Gainsboro were abandoned.",
+				"Amount ARPA obligated": "2,341,075",
+				"ARPA funds narrative": "2.3 million",
+				"Amount city funds budgeted": 2658925,
+				"City funds narrative": "2.65 million",
+				"ARPA spent by end of 24?": "41,000",
+				"Address": "37Â°16'40.2\"N 79Â°56'30.1\"W",
 				"Lat": "37.277815992665700",
 				"Lon": "-79.941662252171900",
-				"Building": null
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "2%",
+				"image_url": "ARPA-photos/10-gainsboro.jpg",
+				"Subrecipient": null
 			},
 			"geometry": {
 				"type": "Point",
@@ -166,14 +211,19 @@
 			"type": "Feature",
 			"properties": {
 				"Project title": "MetroFLX",
+				"Description": "This project extends city bus service by providing on-demand late night and Sunday microtransit. The pandemic prompted a drop-off in those using public transit.",
 				"Amount ARPA obligated": "2,245,243.34",
+				"ARPA funds narrative": "2.25 million",
 				"Amount city funds budgeted": null,
+				"City funds narrative": null,
 				"ARPA spent by end of 24?": "1,915,673.82",
-				"City fund sent by end of 24": null,
-				"% ARPA spent by 24": "85.32%",
+				"Address": "CITYWIDE",
 				"Lat": null,
 				"Lon": null,
-				"Building": null
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "85%",
+				"image_url": "ARPA-photos/11-metroflx.jpg",
+				"Subrecipient": "GRTC"
 			},
 			"geometry": null
 		},
@@ -181,59 +231,79 @@
 			"type": "Feature",
 			"properties": {
 				"Project title": "Outdoor park maintenance",
+				"Description": "Covers improvements to public parks aimed to promote health and safety.",
 				"Amount ARPA obligated": "1,968,788.14",
+				"ARPA funds narrative": "almost 2 million",
 				"Amount city funds budgeted": null,
+				"City funds narrative": null,
 				"ARPA spent by end of 24?": "1,936,528.61",
-				"City fund sent by end of 24": null,
-				"% ARPA spent by 24": "98.36%",
+				"Address": "CITYWIDE",
 				"Lat": null,
 				"Lon": null,
-				"Building": null
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "98%",
+				"image_url": null,
+				"Subrecipient": null
 			},
 			"geometry": null
 		},
 		{
 			"type": "Feature",
 			"properties": {
-				"Project title": "GRWDB Star City Works project",
+				"Project title": "Workforce development program",
+				"Description": "The Greater Roanoke Workforce Development Board was tasked with administering the Star City Works program, devoted to pairing high-growth employers with trained employees.",
 				"Amount ARPA obligated": "1,816,179.35",
+				"ARPA funds narrative": "1.8 million",
 				"Amount city funds budgeted": null,
+				"City funds narrative": null,
 				"ARPA spent by end of 24?": "1,816,179.35",
-				"City fund sent by end of 24": null,
-				"% ARPA spent by 24": "100.00%",
+				"Address": null,
 				"Lat": null,
 				"Lon": null,
-				"Building": null
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "100%",
+				"image_url": null,
+				"Subrecipient": "Workforce Development Board"
 			},
 			"geometry": null
 		},
 		{
 			"type": "Feature",
 			"properties": {
-				"Project title": "Creating NW and SE leaders",
+				"Project title": "Creating NW and SE leaders TK ",
+				"Description": null,
 				"Amount ARPA obligated": "1,652,839.75",
+				"ARPA funds narrative": "1.65 million",
 				"Amount city funds budgeted": null,
-				"ARPA spent by end of 24?": "0.00",
-				"City fund sent by end of 24": null,
-				"% ARPA spent by 24": "0.00%",
+				"City funds narrative": null,
+				"ARPA spent by end of 24?": "0",
+				"Address": null,
 				"Lat": null,
 				"Lon": null,
-				"Building": null
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "0%",
+				"image_url": null,
+				"Subrecipient": null
 			},
 			"geometry": null
 		},
 		{
 			"type": "Feature",
 			"properties": {
-				"Project title": "Gun violence related initiatives, inc PD overtime",
+				"Project title": "Gun violence initiatives, including police overtime pay",
+				"Description": "Gun violence spiked during the pandemic. Funding went to a youth and gang violence prevention unit; Gun Violence Prevention Commission grants and programs; police bonuses and overtime; and other initiatives.",
 				"Amount ARPA obligated": "1,651,063.36",
+				"ARPA funds narrative": "1.65 million",
 				"Amount city funds budgeted": null,
+				"City funds narrative": null,
 				"ARPA spent by end of 24?": "1,622,564.31",
-				"City fund sent by end of 24": null,
-				"% ARPA spent by 24": "98.27%",
+				"Address": "PD",
 				"Lat": "37.271074355410500",
 				"Lon": "-79.947623583229200",
-				"Building": "Roanoke City Police Department"
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "98%",
+				"image_url": null,
+				"Subrecipient": null
 			},
 			"geometry": {
 				"type": "Point",
@@ -243,15 +313,40 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"Project title": "Downtown parking facility maintenance",
-				"Amount ARPA obligated": "884,442.50",
+				"Project title": "Grants to arts/culture groups, nonprofits and small businesses",
+				"Description": "Funds helped arts and cultural organizations disrupted by the pandemic ($580,500); nonprofits that saw increased demand for services ($410,500); Economic Development Authority grants to small businesses ($370,000); and cultural organizations for facility upgrades ($25,000).",
+				"Amount ARPA obligated": "1,386,000",
+				"ARPA funds narrative": "1.39 nillion",
 				"Amount city funds budgeted": null,
-				"ARPA spent by end of 24?": "587,317.50",
+				"City funds narrative": null,
+				"ARPA spent by end of 24?": "580,500",
+				"Address": "CITYWIDE",
+				"Lat": null,
+				"Lon": null,
 				"City fund sent by end of 24": null,
-				"% ARPA spent by 24": "66.41%",
+				"% ARPA spent by 24": "42%",
+				"image_url": null,
+				"Subrecipient": null
+			},
+			"geometry": null
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": "Downtown parking facility upgrades",
+				"Description": "Improvements to parking structures will help create a sense of safety and draw visitor back downtown, according to the city. The pandemic prompted a rapid decline in downtown visitors.",
+				"Amount ARPA obligated": "884,442.50",
+				"ARPA funds narrative": "884 thousand",
+				"Amount city funds budgeted": null,
+				"City funds narrative": null,
+				"ARPA spent by end of 24?": "587,317.50",
+				"Address": "37Â°16'18.8\"N 79Â°56'26.0\"W",
 				"Lat": "37.271892228098500",
 				"Lon": "-79.940557865169300",
-				"Building": null
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "66%",
+				"image_url": null,
+				"Subrecipient": null
 			},
 			"geometry": {
 				"type": "Point",
@@ -261,15 +356,20 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"Project title": "VTC Lab support",
-				"Amount ARPA obligated": "755,000.00",
+				"Project title": "Virginia Tech Carilion lab building",
+				"Description": "Funding will support the creation of the Virginia Tech Carilion lab space to spur growth in the city's innovation corridor.",
+				"Amount ARPA obligated": "755,000",
+				"ARPA funds narrative": "three quarters of a million",
 				"Amount city funds budgeted": null,
-				"ARPA spent by end of 24?": "755,000.00",
-				"City fund sent by end of 24": null,
-				"% ARPA spent by 24": "100.00%",
+				"City funds narrative": null,
+				"ARPA spent by end of 24?": "755,000",
+				"Address": "37Â°15'49.8\"N 79Â°56'27.5\"W",
 				"Lat": "37.263781969666000",
 				"Lon": "-79.941002394778900",
-				"Building": "VTC"
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "100%",
+				"image_url": "ARPA-photos/18-carilion-lab.jpg",
+				"Subrecipient": "VTC"
 			},
 			"geometry": {
 				"type": "Point",
@@ -279,78 +379,40 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"Project title": "Arts and culture grants",
-				"Amount ARPA obligated": "580,500.00",
-				"Amount city funds budgeted": null,
-				"ARPA spent by end of 24?": "580,500.00",
-				"City fund sent by end of 24": null,
-				"% ARPA spent by 24": "100.00%",
-				"Lat": null,
-				"Lon": null,
-				"Building": null
-			},
-			"geometry": null
-		},
-		{
-			"type": "Feature",
-			"properties": {
-				"Project title": "TAP acquire, rehab for permanent support housing",
-				"Amount ARPA obligated": "570,685.00",
-				"Amount city funds budgeted": null,
-				"ARPA spent by end of 24?": "570,685.00",
-				"City fund sent by end of 24": null,
-				"% ARPA spent by 24": "100.00%",
-				"Lat": "37.270788452638400",
-				"Lon": "-79.927902020806700",
-				"Building": "TAP"
-			},
-			"geometry": {
-				"type": "Point",
-				"coordinates": [-79.927902020806698, 37.270788452638399]
-			}
-		},
-		{
-			"type": "Feature",
-			"properties": {
-				"Project title": "Cash transfer to households for utility bills",
+				"Project title": "Cash transfers to households for utility bills",
+				"Description": "Funding helped 636 households to cover electric bills, car payments and medical bills that went unpaid becuase of the pandemic.",
 				"Amount ARPA obligated": "497,043.21",
+				"ARPA funds narrative": "nearly half a million",
 				"Amount city funds budgeted": null,
+				"City funds narrative": null,
 				"ARPA spent by end of 24?": "497,043.21",
-				"City fund sent by end of 24": null,
-				"% ARPA spent by 24": "100.00%",
+				"Address": "CITYWIDE",
 				"Lat": null,
 				"Lon": null,
-				"Building": null
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "100%",
+				"image_url": null,
+				"Subrecipient": null
 			},
 			"geometry": null
 		},
 		{
 			"type": "Feature",
 			"properties": {
-				"Project title": "Grants for substance abuse",
-				"Amount ARPA obligated": "445,100.00",
+				"Project title": "Grants for substance abuse programs",
+				"Description": "Grants supported organizations whose projects treated, prevented or responded to substance abuse issues.",
+				"Amount ARPA obligated": "445,100",
+				"ARPA funds narrative": "almost 450 thousand",
 				"Amount city funds budgeted": null,
-				"ARPA spent by end of 24?": "445,100.00",
-				"City fund sent by end of 24": null,
-				"% ARPA spent by 24": "100.00%",
+				"City funds narrative": null,
+				"ARPA spent by end of 24?": "445,100",
+				"Address": "CITYWIDE",
 				"Lat": null,
 				"Lon": null,
-				"Building": null
-			},
-			"geometry": null
-		},
-		{
-			"type": "Feature",
-			"properties": {
-				"Project title": "Nonprofits grant support",
-				"Amount ARPA obligated": "410,500.00",
-				"Amount city funds budgeted": null,
-				"ARPA spent by end of 24?": "410,500.00",
 				"City fund sent by end of 24": null,
-				"% ARPA spent by 24": "100.00%",
-				"Lat": null,
-				"Lon": null,
-				"Building": null
+				"% ARPA spent by 24": "100%",
+				"image_url": "ARPA-photos/20-substance-abuse.jpg",
+				"Subrecipient": null
 			},
 			"geometry": null
 		},
@@ -358,80 +420,102 @@
 			"type": "Feature",
 			"properties": {
 				"Project title": "Permanent supportive housing for homeless",
-				"Amount ARPA obligated": "390,600.00",
+				"Description": "Commonwealth Catholic Charities proposed to provide permanent housing and supportive services to 41 households experiencing homelessness.",
+				"Amount ARPA obligated": "390,600",
+				"ARPA funds narrative": "nearly 400 thousand",
 				"Amount city funds budgeted": null,
-				"ARPA spent by end of 24?": "390,600.00",
-				"City fund sent by end of 24": null,
-				"% ARPA spent by 24": "100.00%",
-				"Lat": "37.310967692290200",
-				"Lon": "-79.964428509223100",
-				"Building": "Commonwealth Catholic Charities "
-			},
-			"geometry": {
-				"type": "Point",
-				"coordinates": [-79.964428509223097, 37.310967692290198]
-			}
-		},
-		{
-			"type": "Feature",
-			"properties": {
-				"Project title": "EDA small business grants",
-				"Amount ARPA obligated": "370,000.00",
-				"Amount city funds budgeted": null,
-				"ARPA spent by end of 24?": "370,000.00",
-				"City fund sent by end of 24": null,
-				"% ARPA spent by 24": "100.00%",
+				"City funds narrative": null,
+				"ARPA spent by end of 24?": "390,600",
+				"Address": "CITYWIDE",
 				"Lat": null,
 				"Lon": null,
-				"Building": null
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "100%",
+				"image_url": "ARPA-photos/21-ccc-homeless.jpg",
+				"Subrecipient": "Commonwealth Catholic Charities "
 			},
 			"geometry": null
 		},
 		{
 			"type": "Feature",
 			"properties": {
-				"Project title": "DRI ambassador program",
-				"Amount ARPA obligated": "300,000.00",
+				"Project title": "Downtown Roanoke Inc. ambassador program",
+				"Description": "The DRI program, administered through the company Block by Block, cleans up downtown and provides outreach. The program aims to improve the quality of life for downtown visitors and residents.",
+				"Amount ARPA obligated": "300,000",
+				"ARPA funds narrative": "300 thousand",
 				"Amount city funds budgeted": null,
-				"ARPA spent by end of 24?": "300,000.00",
+				"City funds narrative": null,
+				"ARPA spent by end of 24?": "300,000",
+				"Address": "37Â°16'18.8\"N 79Â°56'26.0\"W",
+				"Lat": "37.27183751",
+				"Lon": "-79.94063949",
 				"City fund sent by end of 24": null,
-				"% ARPA spent by 24": "100.00%",
-				"Lat": "37.271877765081600",
-				"Lon": "-79.940540002296900",
-				"Building": "DRI"
+				"% ARPA spent by 24": "100%",
+				"image_url": "ARPA-photos/22-DRI-CLEANING.jpg",
+				"Subrecipient": "DRI"
 			},
 			"geometry": {
 				"type": "Point",
-				"coordinates": [-79.940540002296899, 37.271877765081598]
+				"coordinates": [-79.94063949, 37.27183751]
 			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": "Creating Northwest and Southeast community leaders",
+				"Description": "Service providers and resident leaders met with the goal to empower residents to improve neighborhood health outcomes.",
+				"Amount ARPA obligated": "281,500",
+				"ARPA funds narrative": "over 280 thousand",
+				"Amount city funds budgeted": null,
+				"City funds narrative": null,
+				"ARPA spent by end of 24?": "281,500",
+				"Address": null,
+				"Lat": null,
+				"Lon": null,
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "100%",
+				"image_url": null,
+				"Subrecipient": null
+			},
+			"geometry": null
 		},
 		{
 			"type": "Feature",
 			"properties": {
 				"Project title": "Financial Empowerment Center",
+				"Description": "The center provides financial counseling for those experiencing hardships resulting from the pandemic.",
 				"Amount ARPA obligated": "268,887.03",
+				"ARPA funds narrative": "nearly 270 thousand",
 				"Amount city funds budgeted": null,
-				"ARPA spent by end of 24?": "268,887.00",
-				"City fund sent by end of 24": null,
-				"% ARPA spent by 24": "100.00%",
+				"City funds narrative": null,
+				"ARPA spent by end of 24?": "268,887",
+				"Address": "Freedom First",
 				"Lat": null,
 				"Lon": null,
-				"Building": "Freedom First"
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "100%",
+				"image_url": "ARPA-photos/24-financial-empowerment.jpg",
+				"Subrecipient": "Freedom First"
 			},
 			"geometry": null
 		},
 		{
 			"type": "Feature",
 			"properties": {
-				"Project title": "Collective Response direct funding",
-				"Amount ARPA obligated": "250,000.00",
+				"Project title": "Roanoke Valley Collective Response staffing",
+				"Description": "Funds the executive director of the Roanoke Valley Collective Response to the opioid and addiction crisis, which is housed under the Roanoke Valley-Alleghany Regional Commission.",
+				"Amount ARPA obligated": "250,000",
+				"ARPA funds narrative": "quarter of a million",
 				"Amount city funds budgeted": null,
-				"ARPA spent by end of 24?": "250,000.00",
-				"City fund sent by end of 24": null,
-				"% ARPA spent by 24": "100.00%",
+				"City funds narrative": null,
+				"ARPA spent by end of 24?": "250,000",
+				"Address": "RVARC address",
 				"Lat": null,
 				"Lon": null,
-				"Building": "RVARC"
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "100%",
+				"image_url": "ARPA-photos/25-collective-response.jpg",
+				"Subrecipient": "RVARC"
 			},
 			"geometry": null
 		},
@@ -439,29 +523,39 @@
 			"type": "Feature",
 			"properties": {
 				"Project title": "Tree planting",
-				"Amount ARPA obligated": "230,609.00",
+				"Description": "Focused on Census tracts with less tree coverage, this project will improve air and water quality and reduce energy costs.",
+				"Amount ARPA obligated": "230,609",
+				"ARPA funds narrative": "over 230 thousand",
 				"Amount city funds budgeted": null,
+				"City funds narrative": null,
 				"ARPA spent by end of 24?": "215,104.99",
+				"Address": "NW section",
+				"Lat": "37.3146638",
+				"Lon": "-79.98466039",
 				"City fund sent by end of 24": null,
-				"% ARPA spent by 24": "93.28%",
-				"Lat": null,
-				"Lon": null,
-				"Building": "City wide"
+				"% ARPA spent by 24": "93%",
+				"image_url": "ARPA-photos/26-tree-planting.jpg",
+				"Subrecipient": null
 			},
-			"geometry": null
+			"geometry": { "type": "Point", "coordinates": [-79.98466039, 37.3146638] }
 		},
 		{
 			"type": "Feature",
 			"properties": {
-				"Project title": "Jefferson Center HVAC",
-				"Amount ARPA obligated": "150,000.00",
+				"Project title": "Jefferson Center ",
+				"Description": "Money earmarked for HVAC improvements and marketing.",
+				"Amount ARPA obligated": "150,000",
+				"ARPA funds narrative": "150 thousand",
 				"Amount city funds budgeted": null,
-				"ARPA spent by end of 24?": "150,000.00",
-				"City fund sent by end of 24": null,
-				"% ARPA spent by 24": "100.00%",
+				"City funds narrative": null,
+				"ARPA spent by end of 24?": "150,000",
+				"Address": null,
 				"Lat": "37.270583826796000",
 				"Lon": "-79.951868475833700",
-				"Building": "Jefferson Center"
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "100%",
+				"image_url": "ARPA-photos/27-jefferson-center.jpg",
+				"Subrecipient": "Jefferson Center"
 			},
 			"geometry": {
 				"type": "Point",
@@ -471,15 +565,20 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"Project title": "Center in the Square HVAC",
-				"Amount ARPA obligated": "124,000.00",
+				"Project title": "Center in the Square",
+				"Description": "Money earmarked for HVAC improvements.",
+				"Amount ARPA obligated": "124,000",
+				"ARPA funds narrative": "124 thousand",
 				"Amount city funds budgeted": null,
-				"ARPA spent by end of 24?": "124,000.00",
-				"City fund sent by end of 24": null,
-				"% ARPA spent by 24": "100.00%",
+				"City funds narrative": null,
+				"ARPA spent by end of 24?": "124,000",
+				"Address": null,
 				"Lat": "37.271430559663700",
 				"Lon": "-79.939623164705400",
-				"Building": "Center in the Square"
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "100%",
+				"image_url": "ARPA-photos/28-ctr-square-photo.jpg",
+				"Subrecipient": "Center in the Square"
 			},
 			"geometry": {
 				"type": "Point",
@@ -489,15 +588,20 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"Project title": "Taubman Museum tech for greater spacing",
-				"Amount ARPA obligated": "75,700.00",
+				"Project title": "Taubman Museum of Art",
+				"Description": "Money earmarked for technology improvements for greater spacing of on-site gatherings and production of content for off-site viewing.",
+				"Amount ARPA obligated": "75,700",
+				"ARPA funds narrative": "over 75 thousand",
 				"Amount city funds budgeted": null,
-				"ARPA spent by end of 24?": "75,700.00",
-				"City fund sent by end of 24": null,
-				"% ARPA spent by 24": "100.00%",
+				"City funds narrative": null,
+				"ARPA spent by end of 24?": "75,700",
+				"Address": null,
 				"Lat": "37.272798929381900",
 				"Lon": "-79.938281423595300",
-				"Building": "Taubman Museum"
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "100%",
+				"image_url": "ARPA-photos/29-taubman.jpg",
+				"Subrecipient": "Taubman Museum"
 			},
 			"geometry": {
 				"type": "Point",
@@ -507,15 +611,20 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"Project title": "Grandin Theatre HVAC",
-				"Amount ARPA obligated": "68,500.00",
+				"Project title": "Grandin Theatre ",
+				"Description": "Money earmarked for HVAC improvements and other repairs",
+				"Amount ARPA obligated": "68,500",
+				"ARPA funds narrative": "70 thousand",
 				"Amount city funds budgeted": null,
-				"ARPA spent by end of 24?": "68,500.00",
-				"City fund sent by end of 24": null,
-				"% ARPA spent by 24": "100.00%",
+				"City funds narrative": null,
+				"ARPA spent by end of 24?": "68,500",
+				"Address": null,
 				"Lat": "37.265460297653400",
 				"Lon": "-79.976936758187000",
-				"Building": "Grandin Theatre"
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "100%",
+				"image_url": "ARPA-photos/30-grandin-theatre.jpg",
+				"Subrecipient": "Grandin Theatre"
 			},
 			"geometry": {
 				"type": "Point",
@@ -525,33 +634,22 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"Project title": "Employee health clinic overtime",
-				"Amount ARPA obligated": "29,250.00",
+				"Project title": "City employee health clinic overtime pay",
+				"Description": "The health clinic was responsible for contact tracing for city employees who tested positive for the Covid-19 virus.",
+				"Amount ARPA obligated": "29,250",
+				"ARPA funds narrative": "thirty thousand",
 				"Amount city funds budgeted": null,
-				"ARPA spent by end of 24?": "29,250.00",
-				"City fund sent by end of 24": null,
-				"% ARPA spent by 24": "100.00%",
+				"City funds narrative": null,
+				"ARPA spent by end of 24?": "29,250",
+				"Address": null,
 				"Lat": null,
 				"Lon": null,
-				"Building": "Marathon Health"
-			},
-			"geometry": null
-		},
-		{
-			"type": "Feature",
-			"properties": {
-				"Project title": "Grants to cultural orgs for facility upgrades",
-				"Amount ARPA obligated": "25,000.00",
-				"Amount city funds budgeted": null,
-				"ARPA spent by end of 24?": "25,000.00",
 				"City fund sent by end of 24": null,
-				"% ARPA spent by 24": "100.00%",
-				"Lat": null,
-				"Lon": null,
-				"Building": null
+				"% ARPA spent by 24": "100%",
+				"image_url": null,
+				"Subrecipient": "Marathon Health"
 			},
 			"geometry": null
 		}
-		
 	]
 }

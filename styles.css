@@ -290,9 +290,14 @@ a, .panel-handle .panel-title {
 }
 
 /* highlight the $-amount and %-value in the narrative */
-.narrative-highlight {
+.arpa-narrative-highlight {
   font-weight: bold;
-  color: #0046eb;
+  color: rgba(117,107,177,1);
+}
+
+.city-narrative-highlight {
+  font-weight: bold;
+  color: rgba(117,107,177,0.6);
 }
 
 /* ——————————————————————
@@ -305,6 +310,11 @@ a, .panel-handle .panel-title {
 #card-narrative,
 .mobile-card-details {
   text-align: justify;
+  line-height: 1.3;
+}
+
+#card-details {
+      margin-bottom: -5%;
 }
 
 

@@ -29,6 +29,32 @@ map.on("load", () => {
 
 			// Add source & layer
 			map.addSource("arpa-funds", { type: "geojson", data: geojson });
+
+			map.addLayer({
+				id: "city-funds-circle",
+				type: "circle",
+				source: "arpa-funds",
+				paint: {
+					"circle-radius": [
+						"interpolate",
+						["linear"],
+						["get", "Amount city funds budgeted"],
+						0,
+						0,
+						3000000,
+						36,
+						8000000,
+						38,
+						11399055.97,
+						40,
+					],
+					"circle-color": "green",
+					"circle-stroke-color": "green",
+					"circle-stroke-width": 2,
+				},
+			});
+
+			// ARPA funds layer
 			map.addLayer({
 				id: "arpa-funds-circle",
 				type: "circle",
@@ -39,15 +65,15 @@ map.on("load", () => {
 						["linear"],
 						["get", "amount"],
 						25000,
-						12,
+						4,
 						250000,
-						16,
+						8,
 						1000000,
-						20,
+						12,
 						3000000,
-						24,
+						20,
 						8000000,
-						28,
+						26,
 						11399055.97,
 						32,
 					],
@@ -104,27 +130,27 @@ map.on("load", () => {
 					panel.classList.add("hidden");
 
 					const title = props["Project title"];
-					const amount = props["Amount ARPA obligated"];
+					const description = props["Description"];
+					const amount = props["ARPA funds narrative"];
 					const spent = props["% ARPA spent by 24"];
+					const img_url = props["image_url"];
 
 					// build your narrative
 					const narrative =
-						`Roanoke obligated <span class="narrative-highlight">$${amount}</span> of its ARPA funds to this project. ` +
-						`By the end of 2024, it had spent <span class="narrative-highlight">${spent}</span> of that amount.`;
+						`Roanoke obligated <span class="arpa-narrative-highlight">${amount}</span> dollars of its ARPA funds to this project. ` +
+						`By the end of 2024, it had spent <span class="arpa-narrative-highlight">${spent}</span> of that amount.`;
 
 					// populate
 					document.getElementById("card-title").textContent = title;
-					document.getElementById("card-narrative").innerHTML = narrative;
 
+					// FILL the long text
+					document.getElementById("card-details").textContent = description;
+					document.getElementById("card-narrative").innerHTML = narrative;
 
 					// FILL the image
 					const imgEl = document.getElementById("card-image");
-					imgEl.src = "janeson-keeley-xxyrh3fzYJg-unsplash.jpg";
+					imgEl.src = img_url;
 					imgEl.alt = title;
-
-					// FILL the long text
-					document.getElementById("card-details").textContent =
-						"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio ipsum. Suspendisse cursus malesuada facilisis. Nunc consectetur purus at metus ultricies, et volutpat turpis semper. Donec vitae massa sit amet lacus tincidunt varius.";
 
 					// show card
 					document.getElementById("project-card").classList.add("visible");
@@ -141,13 +167,15 @@ map.on("load", () => {
 					// show desktop popup
 					if (desktopPopup) desktopPopup.remove();
 
-					const amount = props["Amount ARPA obligated"];
+					const amount = props["ARPA funds narrative"];
 					const spent = props["% ARPA spent by 24"];
+					const description = props["Description"];
+					const img_url = props["image_url"];
 
 					// build narrative with highlight spans
 					const narrative =
-						`Roanoke obligated <span class="narrative-highlight">$${amount}</span> of its ARPA funds to this project. ` +
-						`By the end of 2024, it had spent <span class="narrative-highlight">${spent}</span> of that amount.`;
+						`Roanoke obligated <span class="arpa-narrative-highlight">${amount}</span> dollars of its ARPA funds to this project. ` +
+						`By the end of 2024, it had spent <span class="arpa-narrative-highlight">${spent}</span> of that amount.`;
 
 					const html = `
 								<div class="project-popup">
@@ -156,12 +184,13 @@ map.on("load", () => {
 									<div class="popup-page page-main">
 										<h3>${props["Project title"]}</h3>
 										<hr class="popup-divider" />
+										<p>${description}</p>
 										<p>${narrative}</p>
 									</div>
 									<!-- PAGE 2 -->
 									<div class="popup-page page-details">
-										<img src="janeson-keeley-xxyrh3fzYJg-unsplash.jpg" alt="${props["Project title"]}" />
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec quam vitae lectus mollis semper. Sed vulputate nibh vitae purus feugiat, ac scelerisque justo sollicitudin. Integer luctus risus vel felis lacinia, sed varius odio feugiat. Sed fringilla.</p>
+										<img src=${img_url} alt="${props["Project title"]}" />
+										
 									</div>
 									</div>
 									<div class="details-tab">
