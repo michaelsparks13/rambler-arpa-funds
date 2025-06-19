@@ -30,7 +30,6 @@ map.on("load", () => {
 			// pick one tuning knob: larger = bigger circles everywhere
 			const R_SCALE = 0.009; // 0.008 … 0.010 is a good window
 
-
 			// Add source & layer
 			map.addSource("arpa-funds", { type: "geojson", data: geojson });
 
@@ -93,6 +92,42 @@ map.on("load", () => {
 				},
 			});
 
+			// ─── Build funding legend ─────────────────────────────────────
+			(() => {
+				const SAMPLES = [500000, 5000000, 15000000]; // 0.5 M, 5 M, 15 M
+				const legend = document.getElementById("funds-legend");
+
+				SAMPLES.forEach((amount) => {
+					const r = Math.max(4, R_SCALE * Math.sqrt(amount)); // same min-size rule
+
+					const row = document.createElement("div");
+					row.className = "legend-row";
+
+					const circle = document.createElement("div");
+					circle.className = "legend-circle";
+					circle.style.width = `${2 * r}px`;
+					circle.style.height = `${2 * r}px`;
+
+					const label = document.createElement("span");
+					label.textContent = `$${(amount / 1_000_000).toLocaleString(
+						undefined,
+						{
+							maximumFractionDigits: amount < 1_000_000 ? 1 : 0,
+						}
+					)} M`;
+
+					row.append(circle, label);
+					legend.appendChild(row);
+				});
+
+				// explanatory note (outer ring == city money)
+				const note = document.createElement("div");
+				note.className = "legend-note";
+				note.textContent =
+					"Outer ring shows additional city dollars where applicable.";
+				legend.appendChild(note);
+			})();
+
 			// Fit to data extent
 			const valid = geojson.features.filter(
 				(f) => f.geometry && Array.isArray(f.geometry.coordinates)
@@ -120,10 +155,10 @@ map.on("load", () => {
 					const amount = props["ARPA funds narrative"]; // already formatted string like “8,000,000.00”
 					const spent = props["% ARPA spent by 24"]; // e.g. “43.12%”
 					const narrative = `
-									Roanoke obligated <span class="city-narrative-highlight">${amount}</span>
+									Roanoke obligated <span class="arpa-narrative-highlight">${amount}</span>
 									dollars of its ARPA funds to this project. 
 									By the end of 2024, it had spent 
-									<span class="city-narrative-highlight">${spent}</span> of that amount.
+									<span class="arpa-narrative-highlight">${spent}</span> of that amount.
 									`;
 
 					/* ---------- inject full accordion markup ---------- */
@@ -185,73 +220,91 @@ map.on("load", () => {
 
 					const title = props["Project title"];
 					const description = props["Description"];
-					const amount = props["ARPA funds narrative"];
+					const arpaAmount = props["ARPA funds narrative"]; // already formatted
 					const spent = props["% ARPA spent by 24"];
 					const img_url = props["image_url"];
+					const cityBudget = props["Amount city funds budgeted"]; // raw number or null
 
-					// build your narrative
-					const narrative =
-						`Roanoke obligated <span class="arpa-narrative-highlight">${amount}</span> dollars of its ARPA funds to this project. ` +
-						`By the end of 2024, it had spent <span class="arpa-narrative-highlight">${spent}</span> of that amount.`;
+					/* ---------- build narrative ---------- */
+					let narrative = `
+    Roanoke obligated <span class="arpa-narrative-highlight">${arpaAmount}</span>
+    dollars of its ARPA funds to this project.
+    By the end of 2024, it had spent
+    <span class="arpa-narrative-highlight">${spent}</span> of that amount.
+  `;
 
-					// populate
+					if (cityBudget && Number(cityBudget) > 0) {
+						const formattedCity = Number(cityBudget).toLocaleString();
+						narrative += `
+      <br>
+      In addition to the federal ARPA funds, the city budgeted
+      <span class="city-narrative-highlight">$${formattedCity}</span>
+      of its own money to this project, though it is unknown how much of that has been spent.
+    `;
+					}
+
+					// populate mobile card
 					document.getElementById("card-title").textContent = title;
-
-					// FILL the long text
 					document.getElementById("card-details").textContent = description;
 					document.getElementById("card-narrative").innerHTML = narrative;
 
-					// FILL the image
 					const imgEl = document.getElementById("card-image");
 					imgEl.src = img_url;
 					imgEl.alt = title;
 
-					// show card
 					document.getElementById("project-card").classList.add("visible");
 
-					// remove desktop popup if open
 					if (desktopPopup) {
 						desktopPopup.remove();
 						desktopPopup = null;
 					}
 				} else {
-					// remove bottom card if somehow visible
 					document.getElementById("project-card").classList.remove("visible");
-
-					// show desktop popup
 					if (desktopPopup) desktopPopup.remove();
 
-					const amount = props["ARPA funds narrative"];
+					const arpaAmount = props["ARPA funds narrative"];
 					const spent = props["% ARPA spent by 24"];
 					const description = props["Description"];
 					const img_url = props["image_url"];
+					const cityBudget = props["Amount city funds budgeted"];
 
-					// build narrative with highlight spans
-					const narrative =
-						`Roanoke obligated <span class="arpa-narrative-highlight">${amount}</span> dollars of its ARPA funds to this project. ` +
-						`By the end of 2024, it had spent <span class="arpa-narrative-highlight">${spent}</span> of that amount.`;
+					let narrative = `
+    Roanoke obligated <span class="arpa-narrative-highlight">${arpaAmount}</span>
+    dollars of its ARPA funds to this project.
+    By the end of 2024, it had spent
+    <span class="arpa-narrative-highlight">${spent}</span> of that amount.
+  `;
+
+					if (cityBudget && Number(cityBudget) > 0) {
+						const formattedCity = Number(cityBudget).toLocaleString();
+						narrative += `
+      <br>
+      In addition to the federal ARPA funds, the city budgeted
+      <span class="city-narrative-highlight">$${formattedCity}</span>
+      of its own money to this project, though it is unknown how much of that has been spent.
+    `;
+					}
 
 					const html = `
-								<div class="project-popup">
-									<div class="popup-pages">
-									<!-- PAGE 1 -->
-									<div class="popup-page page-main">
-										<h3>${props["Project title"]}</h3>
-										<hr class="popup-divider" />
-										<p>${description}</p>
-										<p>${narrative}</p>
-									</div>
-									<!-- PAGE 2 -->
-									<div class="popup-page page-details">
-										<img src=${img_url} alt="${props["Project title"]}" />
-										
-									</div>
-									</div>
-									<div class="details-tab">
-										<span class="details-label">DETAILS</span>
-										<span class="arrow">→</span>
-									</div>
-								</div>`;
+    <div class="project-popup">
+      <div class="popup-pages">
+        <!-- PAGE 1 -->
+        <div class="popup-page page-main">
+          <h3>${props["Project title"]}</h3>
+          <hr class="popup-divider" />
+          <p>${description}</p>
+          <p>${narrative}</p>
+        </div>
+        <!-- PAGE 2 -->
+        <div class="popup-page page-details">
+          <img src="${img_url}" alt="${props["Project title"]}" />
+        </div>
+      </div>
+      <div class="details-tab">
+        <span class="details-label">DETAILS</span>
+        <span class="arrow">→</span>
+      </div>
+    </div>`;
 
 					desktopPopup = new maptilersdk.Popup({
 						offset: [-1, -5],
