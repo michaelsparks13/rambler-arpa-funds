@@ -94,11 +94,16 @@ map.on("load", () => {
 
 			// ─── Build funding legend ─────────────────────────────────────
 			(() => {
-				const SAMPLES = [500000, 5000000, 15000000]; // 0.5 M, 5 M, 15 M
-				const legend = document.getElementById("funds-legend");
+				const SAMPLES = [500000, 5000000, 15000000]; // 0.5 M · 5 M · 15 M
 
+				// grab the elements we added in index.html
+				const legend = document.getElementById("funds-legend");
+				const legendBody = document.getElementById("legend-body");
+				const toggleBtn = document.getElementById("legend-toggle");
+
+				/* ---- populate the rows (same math as before) ---- */
 				SAMPLES.forEach((amount) => {
-					const r = Math.max(4, R_SCALE * Math.sqrt(amount)); // same min-size rule
+					const r = Math.max(4, R_SCALE * Math.sqrt(amount)); // same min-radius rule
 
 					const row = document.createElement("div");
 					row.className = "legend-row";
@@ -117,15 +122,29 @@ map.on("load", () => {
 					)} M`;
 
 					row.append(circle, label);
-					legend.appendChild(row);
+					legendBody.appendChild(row); // ⬅️  append to legendBody, not legend
 				});
 
-				// explanatory note (outer ring == city money)
 				const note = document.createElement("div");
 				note.className = "legend-note";
 				note.textContent =
 					"Outer ring shows additional city dollars where applicable.";
-				legend.appendChild(note);
+				legendBody.appendChild(note);
+
+				/* ---- collapse on phones ---- */
+				if (window.matchMedia("(max-width: 600px)").matches) {
+					legend.classList.add("collapsed"); // start closed
+				}
+
+				/* ---- toggle button ---- */
+				toggleBtn.addEventListener("click", () => {
+					legend.classList.toggle("collapsed");
+					const expanded = !legend.classList.contains("collapsed");
+					toggleBtn.setAttribute(
+						"aria-label",
+						expanded ? "Hide funding scale" : "Show funding scale"
+					);
+				});
 			})();
 
 			// Fit to data extent
