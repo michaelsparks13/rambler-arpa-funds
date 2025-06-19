@@ -90,7 +90,7 @@
 				"Lon": "-79.927788592817700",
 				"City fund sent by end of 24": null,
 				"% ARPA spent by 24": "100%",
-				"image_url": null,
+				"image_url": "ARPA-photos/5-affordable-housing.jpg",
 				"Subrecipient": null
 			},
 			"geometry": {
@@ -113,7 +113,7 @@
 				"Lon": null,
 				"City fund sent by end of 24": null,
 				"% ARPA spent by 24": "97%",
-				"image_url": null,
+				"image_url": "ARPA-photos/6-lost-revenue.jpg",
 				"Subrecipient": null
 			},
 			"geometry": null
@@ -156,7 +156,7 @@
 				"Lon": null,
 				"City fund sent by end of 24": null,
 				"% ARPA spent by 24": "73%",
-				"image_url": null,
+				"image_url": "ARPA-photos/8-housing-homeless.jpg",
 				"Subrecipient": null
 			},
 			"geometry": null
@@ -242,7 +242,7 @@
 				"Lon": null,
 				"City fund sent by end of 24": null,
 				"% ARPA spent by 24": "98%",
-				"image_url": null,
+				"image_url": "ARPA-photos/12-park-maintenance.jpg",
 				"Subrecipient": null
 			},
 			"geometry": null
@@ -262,7 +262,7 @@
 				"Lon": null,
 				"City fund sent by end of 24": null,
 				"% ARPA spent by 24": "100%",
-				"image_url": null,
+				"image_url": "ARPA-photos/13-workforce.jpg",
 				"Subrecipient": "Workforce Development Board"
 			},
 			"geometry": null
@@ -282,7 +282,7 @@
 				"Lon": null,
 				"City fund sent by end of 24": null,
 				"% ARPA spent by 24": "0%",
-				"image_url": null,
+				"image_url": "ARPA-photos/14-neighborhoods-feature.jpg",
 				"Subrecipient": null
 			},
 			"geometry": null
@@ -302,7 +302,7 @@
 				"Lon": "-79.947623583229200",
 				"City fund sent by end of 24": null,
 				"% ARPA spent by 24": "98%",
-				"image_url": null,
+				"image_url": "ARPA-photos/15-gun-violence.jpg",
 				"Subrecipient": null
 			},
 			"geometry": {
@@ -325,7 +325,7 @@
 				"Lon": null,
 				"City fund sent by end of 24": null,
 				"% ARPA spent by 24": "42%",
-				"image_url": null,
+				"image_url": "ARPA-photos/16-arts-biz-grants.jpg",
 				"Subrecipient": null
 			},
 			"geometry": null
@@ -345,7 +345,7 @@
 				"Lon": "-79.940557865169300",
 				"City fund sent by end of 24": null,
 				"% ARPA spent by 24": "66%",
-				"image_url": null,
+				"image_url": "ARPA-photos/17-parking.jpg",
 				"Subrecipient": null
 			},
 			"geometry": {
@@ -391,7 +391,7 @@
 				"Lon": null,
 				"City fund sent by end of 24": null,
 				"% ARPA spent by 24": "100%",
-				"image_url": null,
+				"image_url": "ARPA-photos/19-cash-bills.jpg",
 				"Subrecipient": null
 			},
 			"geometry": null
@@ -490,14 +490,17 @@
 				"City funds narrative": null,
 				"ARPA spent by end of 24?": "268,887",
 				"Address": "Freedom First",
-				"Lat": null,
-				"Lon": null,
+				"Lat": 37.267821187450195,
+				"Lon": -79.93764192380391,
 				"City fund sent by end of 24": null,
 				"% ARPA spent by 24": "100%",
 				"image_url": "ARPA-photos/24-financial-empowerment.jpg",
 				"Subrecipient": "Freedom First"
 			},
-			"geometry": null
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-79.93764192380391, 37.267821187450195]
+			}
 		},
 		{
 			"type": "Feature",
@@ -510,14 +513,17 @@
 				"City funds narrative": null,
 				"ARPA spent by end of 24?": "250,000",
 				"Address": "RVARC address",
-				"Lat": null,
-				"Lon": null,
+				"Lat": 37.270058153710096,
+				"Lon": -79.94606698713979,
 				"City fund sent by end of 24": null,
 				"% ARPA spent by 24": "100%",
 				"image_url": "ARPA-photos/25-collective-response.jpg",
 				"Subrecipient": "RVARC"
 			},
-			"geometry": null
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-79.94606698713979, 37.270058153710096]
+			}
 		},
 		{
 			"type": "Feature",
@@ -530,15 +536,15 @@
 				"City funds narrative": null,
 				"ARPA spent by end of 24?": "215,104.99",
 				"Address": "NW section",
-				"Lat": "37.3146638",
-				"Lon": "-79.98466039",
+				"Lat": "37.293223026828464",
+				"Lon": "-79.96644351045798",
 				"City fund sent by end of 24": null,
 				"% ARPA spent by 24": "93%",
 				"image_url": "ARPA-photos/26-tree-planting.jpg",
 				"Subrecipient": null
 			},
-			"geometry": { "type": "Point", "coordinates": [-79.98466039, 37.3146638] }
-		},
+			"geometry": { "type": "Point", "coordinates": [-79.96644351045798, 37.293223026828464] }
+		}, 
 		{
 			"type": "Feature",
 			"properties": {
@@ -646,7 +652,7 @@
 				"Lon": null,
 				"City fund sent by end of 24": null,
 				"% ARPA spent by 24": "100%",
-				"image_url": null,
+				"image_url": "ARPA-photos/31-covid-clinic.jpg",
 				"Subrecipient": "Marathon Health"
 			},
 			"geometry": null

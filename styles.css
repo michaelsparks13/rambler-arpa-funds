@@ -45,7 +45,7 @@ section[aria-label="Map"] {
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   font-family: 'Source Serif Pro', serif;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   z-index: 1000;      /* above map controls and popups */
   text-align: center;
 }
@@ -69,24 +69,24 @@ h1, h2, h3, h4, h5, h6 {
 /* 4) Link color & underline style */
 a, .panel-handle .panel-title {
   color: #007a62;         /* Rambler’s green accent */
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 /* 5) Panel‐handle title styling */
 .panel-title {
   font-family: 'Source Serif Pro', serif;
-  font-size: 0.9rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: #1a1a1a;
 }
 
 #card-title {
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   text-align: center;
 }
 
 #card-narrative {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   font-family: 'Source Serif Pro', serif;
   color: #1a1a1a;
   text-align: center;
@@ -96,7 +96,7 @@ a, .panel-handle .panel-title {
 .project-popup h2,
 .city-card h2 {
   font-family: 'Source Serif Pro', serif;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #1a1a1a;
   margin-bottom: 0.25em;
 }
@@ -104,7 +104,7 @@ a, .panel-handle .panel-title {
 .project-popup p,
 .city-card p {
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 0.9rem;
+  font-size: 1.25rem;
   color: #2c2c2c;
   margin: 0.25em 0;
 }
@@ -113,7 +113,7 @@ a, .panel-handle .panel-title {
   font-size: 1.3rem;
 }
 .project-popup p {
-  font-size: 1.1rem
+  font-size: 1.25rem
 }
 
 .project-card h2,
@@ -204,7 +204,7 @@ a, .panel-handle .panel-title {
 .mobile-card-details {
   text-align: center;
   font-family: 'Source Serif Pro', serif;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   color: #1a1a1a;
   line-height: 1.5;
   margin: 0.5rem 1rem 1rem;
@@ -268,17 +268,55 @@ a, .panel-handle .panel-title {
 .city-card {
   background: #f9f9f9;
   border-radius: 6px;
-  padding: 12px;
+  padding: 0.75rem 1rem;      
+  max-height: 4.5rem;
   margin-bottom: 12px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  cursor: pointer;                 /* make it obvious it’s tappable */
+  overflow: hidden;                /* hide extra content when collapsed */
+  transition: max-height 0.3s ease;
 }
+  
+/* the hidden extra section */
+.city-card .card-extra {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transform: translateY(-0.5rem);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+
+.city-card.expanded {
+  max-height: 1000px;      
+}
+
+.city-card.expanded .card-extra {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 600px;
+}
+
+.card-extra p {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.card-extra img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+  margin: 0.5rem 0;
+}
+
 .city-card h3 {
   margin: 0 0 4px;
-  font-size: 16px;
+  font-size: 1.3rem;
 }
 .city-card p {
-  margin: 2px 0;
-  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.25;
 }
 
 /* divider under popup titles */
@@ -292,12 +330,12 @@ a, .panel-handle .panel-title {
 /* highlight the $-amount and %-value in the narrative */
 .arpa-narrative-highlight {
   font-weight: bold;
-  color: rgba(117,107,177,1);
+  color: rgba(253, 192, 134, 0.8);
 }
 
 .city-narrative-highlight {
   font-weight: bold;
-  color: rgba(117,107,177,0.6);
+  color: rgba(190, 174, 212, 0.8);
 }
 
 /* ——————————————————————
@@ -327,6 +365,10 @@ a, .panel-handle .panel-title {
     overflow: hidden;
   }
 
+  .map-title {
+    font-size: 1.2rem;
+  }
+
 }
 
 /* === Two-page slider CSS === */
@@ -342,6 +384,7 @@ a, .panel-handle .panel-title {
     width: 200%;               /* two panels side by side */
     transform: translateX(0);
     transition: transform .3s ease;
+    font-size: 1.25rem;
   }
   .popup-page {
     flex: 0 0 50%;             /* each panel takes half of the 200% width */

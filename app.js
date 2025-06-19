@@ -27,6 +27,10 @@ map.on("load", () => {
 				f.properties.amount = isNaN(num) ? 0 : num;
 			});
 
+			// pick one tuning knob: larger = bigger circles everywhere
+			const R_SCALE = 0.009; // 0.008 … 0.010 is a good window
+
+
 			// Add source & layer
 			map.addSource("arpa-funds", { type: "geojson", data: geojson });
 
@@ -34,25 +38,33 @@ map.on("load", () => {
 				id: "city-funds-circle",
 				type: "circle",
 				source: "arpa-funds",
+				filter: [
+					"all",
+					["has", "Amount city funds budgeted"],
+					["!=", ["get", "Amount city funds budgeted"], null],
+					[">", ["to-number", ["get", "Amount city funds budgeted"]], 0],
+				],
 				paint: {
+					// radius = √ARPA * k  +  √CITY * k   (=> ring width encodes city money)
 					"circle-radius": [
-						"interpolate",
-						["linear"],
-						["get", "Amount city funds budgeted"],
-						0,
-						0,
-						3000000,
-						36,
-						8000000,
-						38,
-						11399055.97,
-						40,
+						"+",
+						["*", R_SCALE, ["sqrt", ["to-number", ["get", "amount"]]]],
+						[
+							"*",
+							R_SCALE,
+							["sqrt", ["to-number", ["get", "Amount city funds budgeted"]]],
+						],
 					],
-					"circle-color": "green",
-					"circle-stroke-color": "green",
-					"circle-stroke-width": 2,
+
+					/* give the ring its own tint so the thickness is visible */
+					"circle-color": "rgba(255,127,0)",
+					"circle-opacity": 0.6, // translucent so it doesn’t overpower
+					"circle-stroke-color": "rgba(255,127,0)",
+					"circle-stroke-width": 1.2,
+					"circle-stroke-opacity": 0.6,
 				},
 			});
+			console.log("layer added");
 
 			// ARPA funds layer
 			map.addLayer({
@@ -60,26 +72,24 @@ map.on("load", () => {
 				type: "circle",
 				source: "arpa-funds",
 				paint: {
+					// radius = √ARPA * k   (same k so disks nest snugly)
 					"circle-radius": [
-						"interpolate",
-						["linear"],
-						["get", "amount"],
-						25000,
+						"case",
+						/* keep a readable minimum — very small grants would vanish otherwise */
+						[
+							"<",
+							["*", R_SCALE, ["sqrt", ["to-number", ["get", "amount"]]]],
+							4,
+						],
 						4,
-						250000,
-						8,
-						1000000,
-						12,
-						3000000,
-						20,
-						8000000,
-						26,
-						11399055.97,
-						32,
+						["*", R_SCALE, ["sqrt", ["to-number", ["get", "amount"]]]],
 					],
-					"circle-color": "rgba(117,107,177,0.6)",
-					"circle-stroke-color": "rgba(117,107,177,1)",
-					"circle-stroke-width": 3,
+
+					"circle-color": "rgba(152,78,163)",
+					"circle-opacity": 0.6,
+					"circle-stroke-color": "rgba(152,78,163)",
+					"circle-stroke-width": 1.5,
+					"circle-stroke-opacity": 0.6,
 				},
 			});
 
@@ -93,7 +103,7 @@ map.on("load", () => {
 					(b, c) => b.extend(c),
 					new maptilersdk.LngLatBounds(coords[0], coords[0])
 				);
-				map.fitBounds(bounds, { padding: 50, maxZoom: 14 });
+				map.fitBounds(bounds, { padding: 75, maxZoom: 14 });
 			}
 
 			// Populate the pull-up panel with city-wide (no-geometry) features
@@ -102,14 +112,58 @@ map.on("load", () => {
 				.filter((f) => !(f.geometry && Array.isArray(f.geometry.coordinates)))
 				.forEach((f) => {
 					const props = f.properties;
+
 					const card = document.createElement("div");
 					card.className = "city-card";
+
+					/* ---------- build the project-specific narrative ---------- */
+					const amount = props["ARPA funds narrative"]; // already formatted string like “8,000,000.00”
+					const spent = props["% ARPA spent by 24"]; // e.g. “43.12%”
+					const narrative = `
+									Roanoke obligated <span class="city-narrative-highlight">${amount}</span>
+									dollars of its ARPA funds to this project. 
+									By the end of 2024, it had spent 
+									<span class="city-narrative-highlight">${spent}</span> of that amount.
+									`;
+
+					/* ---------- inject full accordion markup ---------- */
 					card.innerHTML = `
-            <h3>${props["Project title"]}</h3>
-            <p><strong>Amount ARPA obligated:</strong>
-               $${props["Amount ARPA obligated"]}</p>
-          `;
+									<!-- ALWAYS visible header -->
+									<div class="card-header">
+										<h3>${props["Project title"]}</h3>
+									</div>
+
+									<!-- Hidden until card gets .expanded -->
+									<div class="card-extra">
+										<p class="card-description">${props["Description"]}</p>
+										<p class="card-narrative">${narrative}</p>
+										<img src="${props["image_url"]}" alt="${props["Project title"]}" />
+									</div>
+									`;
+
 					cityContainer.appendChild(card);
+
+					// ─── accordion toggle ──────────────────────────────────────────
+					card.addEventListener("click", () => {
+						// 1. collapse any other open card (optional but nicer UX):
+						document
+							.querySelectorAll(".city-card.expanded")
+							.forEach(
+								(open) => open !== card && open.classList.remove("expanded")
+							);
+
+						// 2. toggle this card
+						card.classList.toggle("expanded");
+
+						// 3. ensure the expanded card stays fully in view inside the scroll area
+						if (card.classList.contains("expanded")) {
+							setTimeout(
+								() =>
+									card.scrollIntoView({ block: "nearest", behavior: "smooth" }),
+								300
+							);
+						}
+					});
 				});
 
 			// Hide mobile project‐card on desktop
@@ -254,13 +308,13 @@ map.on("load", () => {
 		})
 		.catch((err) => console.error(err));
 
-		// Mobile card close‐button
-		document.getElementById("close-card").addEventListener("click", () => {
-			// hide the project card
-			document.getElementById("project-card").classList.remove("visible");
-			// re-show the city-wide pull-up panel
-			document.getElementById("city-wide-panel").classList.remove("hidden");
-		});
+	// Mobile card close‐button
+	document.getElementById("close-card").addEventListener("click", () => {
+		// hide the project card
+		document.getElementById("project-card").classList.remove("visible");
+		// re-show the city-wide pull-up panel
+		document.getElementById("city-wide-panel").classList.remove("hidden");
+	});
 
 	// Pull-up panel handle toggle
 	const panel = document.getElementById("city-wide-panel");
