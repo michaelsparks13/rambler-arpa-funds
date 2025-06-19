@@ -305,25 +305,13 @@ map.on("load", () => {
 					}
 
 					const html = `
-    <div class="project-popup">
-      <div class="popup-pages">
-        <!-- PAGE 1 -->
-        <div class="popup-page page-main">
-          <h3>${props["Project title"]}</h3>
-          <hr class="popup-divider" />
-          <p>${description}</p>
-          <p>${narrative}</p>
-        </div>
-        <!-- PAGE 2 -->
-        <div class="popup-page page-details">
-          <img src="${img_url}" alt="${props["Project title"]}" />
-        </div>
-      </div>
-      <div class="details-tab">
-        <span class="details-label">DETAILS</span>
-        <span class="arrow">→</span>
-      </div>
-    </div>`;
+  <div class="project-card-desktop">
+    <h3 class="pc-title">${props["Project title"]}</h3>
+    <hr class="pc-divider" />
+    <p class="pc-description">${description}</p>
+    <p class="pc-narrative">${narrative}</p>
+    <img class="pc-image" src="${img_url}" alt="${props["Project title"]}" />
+  </div>`;
 
 					desktopPopup = new maptilersdk.Popup({
 						offset: [-1, -5],

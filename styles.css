@@ -218,6 +218,57 @@ a,
 	margin: 0.5rem 1rem 1rem;
 }
 
+/* ─── Desktop popup as card (rev 2) ────────────────────────── */
+.project-card-desktop {
+  max-width: 500px;          /* 1⃣  wider than the old 320 px  */
+  max-height: 40vh;          /* 3⃣  cap height at 70 % viewport */
+  overflow-y: auto;          /*     add native scroll bar       */
+  background: #f7f7f7;       /*     same soft gray              */
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+
+  /* 2⃣  inherit the same base sizes used in the mobile drawer */
+  font-size: 1rem;           /* mobile body size               */
+  line-height: 1.45;
+}
+
+/* optional: slim, subtle scroll-bar (WebKit & Chromium) */
+.project-card-desktop::-webkit-scrollbar {
+  width: 6px;
+}
+.project-card-desktop::-webkit-scrollbar-thumb {
+  background: #c2c2c2;
+  border-radius: 3px;
+}
+
+.pc-title {
+  margin: 0 0 0.35rem;
+  font-size: 1.2rem;         /* mobile heading size            */
+  line-height: 1.2;
+}
+
+.pc-divider {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 0.4rem 0 0.9rem;
+}
+
+.pc-description,
+.pc-narrative {
+  margin: 0 0 1rem;
+}
+
+.pc-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+
+
 /* CITY-WIDE PULL-UP PANEL */
 .city-wide-panel {
 	position: absolute;
@@ -403,10 +454,15 @@ a,
   padding: 0.25rem 0.7rem;
   font-size: 0.8rem;
   background: #0d6b30;
+  opacity: 50%;
   color: #fff;
   border: none;
   border-radius: 16px;
   cursor: pointer;
+}
+
+#legend-body {
+  margin-top: 0.5rem;
 }
 
 /* ── Collapse logic ──────────────────────────*/
@@ -427,7 +483,7 @@ a,
 
 	#funds-legend {
 		top: 15%;
-		right: 40%;
+		right: 35%;
 		bottom: auto;
 		left: auto;
 		padding: 0.5rem 0.6rem;
