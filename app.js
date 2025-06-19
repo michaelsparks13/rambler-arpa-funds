@@ -4,12 +4,14 @@ maptilersdk.config.apiKey = "R5Js2wLegZ6GMYd5iN2E";
 // 2. Create the map
 const map = new maptilersdk.Map({
 	container: "map",
-	style: maptilersdk.MapStyle.STREETS,
+	style: maptilersdk.MapStyle.LANDSCAPE,
 	center: [-79.94, 37.27],
 	zoom: 10,
 	navigationControl: false,
 	geolocateControl: false,
 });
+
+window.map = map;
 
 map.on("load", () => {
 	const isMobile = window.innerWidth < 768;
@@ -382,4 +384,45 @@ map.on("load", () => {
 	handle.addEventListener("click", () => {
 		panel.classList.toggle("open");
 	});
+});
+
+console.log(
+	map
+		.getStyle()
+		.layers.filter((l) => l.type === "line" && l.id.includes("road"))
+		.map((l) => l.id)
+);
+
+
+/* ─── Once the style finishes loading, recolour highways to white ─── */
+map.once("idle", () => {
+  const WHITE = "#ffffff";
+
+  // examine every layer in the style
+  map.getStyle().layers.forEach((layer) => {
+    /* MapTiler Light names:
+       road-motorway-case   (orange casing)
+       road-motorway
+       road-trunk-case
+       road-trunk
+       road-primary-case
+       road-primary
+       … plus dash variants like road-motorway-link, etc.
+    */
+    const id = layer.id;
+
+    const isHighway =
+      id.startsWith("road-motorway") ||
+      id.startsWith("road-trunk") ||
+      id.startsWith("road-primary") ||
+      id.startsWith("road-secondary");
+
+    if (layer.type === "line" && isHighway) {
+      map.setPaintProperty(id, "line-color", WHITE);
+      // If the style has separate "casing" layers, set them too:
+      if (map.getPaintProperty(id, "line-color") !== WHITE) {
+        map.setPaintProperty(id, "line-color", WHITE);
+      }
+    }
+  });
 });
