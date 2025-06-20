@@ -204,7 +204,7 @@ a,
 	width: 90%; /* a little inset from the edges */
 	height: auto;
 	object-fit: cover;
-	border-radius: 4px;
+	border-radius: 15px;
 	margin-top: -10%;
 }
 
@@ -220,54 +220,52 @@ a,
 
 /* ─── Desktop popup as card (rev 2) ────────────────────────── */
 .project-card-desktop {
-  max-width: 500px;          /* 1⃣  wider than the old 320 px  */
-  max-height: 40vh;          /* 3⃣  cap height at 70 % viewport */
-  overflow-y: auto;          /*     add native scroll bar       */
-  background: #f7f7f7;       /*     same soft gray              */
-  border-radius: 8px;
-  padding: 1rem 1.25rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+	max-width: 500px; /* 1⃣  wider than the old 320 px  */
+	max-height: 30vh; /* 3⃣  cap height at 70 % viewport */
+	overflow-y: auto; /*     add native scroll bar       */
+	background: #f7f7f7; /*     same soft gray              */
+	border-radius: 8px;
+	padding: 1rem 1.25rem;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 
-  /* 2⃣  inherit the same base sizes used in the mobile drawer */
-  font-size: 1rem;           /* mobile body size               */
-  line-height: 1.45;
+	/* 2⃣  inherit the same base sizes used in the mobile drawer */
+	font-size: 1rem; /* mobile body size               */
+	line-height: 1.45;
 }
 
 /* optional: slim, subtle scroll-bar (WebKit & Chromium) */
 .project-card-desktop::-webkit-scrollbar {
-  width: 6px;
+	width: 6px;
 }
 .project-card-desktop::-webkit-scrollbar-thumb {
-  background: #c2c2c2;
-  border-radius: 3px;
+	background: #c2c2c2;
+	border-radius: 3px;
 }
 
 .pc-title {
-  margin: 0 0 0.35rem;
-  font-size: 1.2rem;         /* mobile heading size            */
-  line-height: 1.2;
+	margin: 0 0 0.35rem;
+	font-size: 1.2rem; /* mobile heading size            */
+	line-height: 1.2;
 }
 
 .pc-divider {
-  border: none;
-  border-top: 1px solid #ddd;
-  margin: 0.4rem 0 0.9rem;
+	border: none;
+	border-top: 1px solid #ddd;
+	margin: 0.4rem 0 0.9rem;
 }
 
 .pc-description,
 .pc-narrative {
-  margin: 0 0 1rem;
+	margin: 0 0 1rem;
 }
 
 .pc-image {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-  display: block;
-  margin-bottom: 0.5rem;
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	display: block;
+	margin-bottom: 0.5rem;
 }
-
-
 
 /* CITY-WIDE PULL-UP PANEL */
 .city-wide-panel {
@@ -450,23 +448,25 @@ a,
 }
 
 #legend-toggle {
-  display: none;                 /* hidden by default (desktop) */
-  padding: 0.25rem 0.7rem;
-  font-size: 0.8rem;
-  background: #0d6b30;
-  opacity: 50%;
-  color: #fff;
-  border: none;
-  border-radius: 16px;
-  cursor: pointer;
+	display: none; /* hidden by default (desktop) */
+	padding: 0.25rem 0.7rem;
+	font-size: 0.8rem;
+	background: #0d6b30;
+	opacity: 80%;
+	color: #fff;
+	border: none;
+	border-radius: 16px;
+	cursor: pointer;
 }
 
 #legend-body {
-  margin-top: 0.5rem;
+	margin-top: 0.5rem;
 }
 
 /* ── Collapse logic ──────────────────────────*/
-.legend.collapsed #legend-body { display: none; }
+.legend.collapsed #legend-body {
+	display: none;
+}
 
 /* ——————————————————————
    Prevent any page‐level scrolling on mobile
@@ -482,11 +482,12 @@ a,
 	}
 
 	#funds-legend {
-		top: 15%;
-		right: 35%;
+		top: 3%;
+		right: auto;
 		bottom: auto;
 		left: auto;
 		padding: 0.5rem 0.6rem;
+    margin: 10px;
 	}
 
 	#legend-toggle {
@@ -496,161 +497,50 @@ a,
 		background: rgba(255, 255, 255, 0.8); /* slimmer card when closed */
 		width: auto;
 	}
-}
 
-/* === Two-page slider CSS === */
-@media (min-width: 768px) {
-	/* 1. container & sliding panels */
-	.project-popup {
-		position: relative;
-		overflow: hidden;
-		width: 300px; /* match your popup’s width */
-	}
-	.popup-pages {
-		display: flex;
-		width: 200%; /* two panels side by side */
-		transform: translateX(0);
-		transition: transform 0.3s ease;
-		font-size: 1.25rem;
-	}
-	.popup-page {
-		flex: 0 0 50%; /* each panel takes half of the 200% width */
-		padding: 1rem;
-	}
-
-	/* ensure padding is included in the flex‐item width */
-	.project-popup .popup-page.page-main {
-		box-sizing: border-box;
-		/* top | right  | bottom | left */
-		padding: 1rem 2.5rem 1rem 1rem !important;
-	}
-
-	/* 3. PAGE 2: also reserve that right gutter so the image/text can’t slip under */
-	.project-popup .popup-page.page-details {
-		box-sizing: border-box;
-		padding: 1rem 2.5rem 1rem 1rem;
-		display: flex;
-		flex-direction: column;
-		overflow-y: auto;
-	}
-
-	/* (optional) bump the popup container a bit wider so text never collides */
-	.maptilersdk-popup .project-popup {
-		width: 350px; /* adjust up/down as you like */
-		max-width: 90vw;
-	}
-
-	.popup-page.page-details img {
-		/* full width minus the tab area */
-		width: calc(100% - 2.5rem);
-		height: auto;
-		object-fit: cover;
-		margin: 0 auto 1rem;
-		border-radius: 4px;
-	}
-
-	/* 2. toggled state: slide to page-2 */
-	.project-popup.show-details .popup-pages {
-		transform: translateX(-50%);
-	}
-
-	/* 3. vertical DETAILS tab */
-	.details-tab {
-		position: absolute;
-		top: 50%;
-		right: -0.5rem;
-		transform: translateY(-50%);
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		padding: 0.25rem;
-		z-index: 10; /* stay on top */
-		cursor: pointer;
-		user-select: none;
-	}
-
-	/* rotate only the word */
-	.details-tab .details-label {
-		display: inline-block;
-		margin: 0;
-		transform: rotate(-90deg);
-		transform-origin: center center;
-		font-weight: bold;
-	}
-
-	/* keep the arrow upright */
-	.details-tab .arrow {
-		display: inline-block;
-		margin-top: -1.1rem;
-		margin-left: 1.5rem;
-		font-weight: 900; /* extra bold */
-		line-height: 1; /* keep it centered */
-		text-shadow: 0.5px 0 0 currentColor, -0.5px 0 0 currentColor,
-			0 0.5px 0 currentColor, 0 -0.5px 0 currentColor;
-	}
-
-	.popup-page.page-details {
-		display: flex;
-		flex-direction: column;
-		height: 100%; /* match the popup’s current height */
-		overflow-y: auto; /* scroll the content inside */
-		direction: rtl;
-		padding: 1rem 3rem 1rem 1rem;
-	}
-
-	.popup-page.page-details > * {
-		direction: ltr;
-	}
-
-	/* 2. Stretch the image to fill the pane’s width */
-	.popup-page.page-details img {
+	#project-card {
 		width: 100%;
-		height: auto;
-		object-fit: cover;
-		flex-shrink: 0; /* don’t let the img shrink as you scroll */
-		margin-bottom: 0.5rem;
+		max-width: 100%;
+		padding: 0 24px; /* match your desired horizontal inset */
+		box-sizing: border-box; /* include that padding in the width calculation */
+		overflow-x: hidden; /* cut off any overflowing children */
 	}
 
-	/* 3. Ensure your paragraph sits below the image */
-	.popup-page.page-details p {
-		margin: 0 1rem 1rem; /* horizontal padding + bottom space */
-		line-height: 1.4;
+	/* ensure your text container has the same horizontal padding */
+	#project-card .card-content {
+		padding: 0 16px; /* match whatever your paragraph uses */
 	}
 
-	/* 1. Force every desktop popup to a uniform height */
-	.maptilersdk-popup .project-popup {
-		height: 400px; /* pick whatever works best for your layout */
-		max-height: 90vh; /* optional cap so it never exceeds the viewport */
+	/* Center the title */
+	#project-card .card-title {
+		text-align: center;
+		width: 90%;
+		margin: 0 auto;
+    margin-top: 5%;
 	}
 
-	/* 2. Make the pages fill that height */
-	.popup-pages,
-	.popup-page {
-		height: 100%;
+	#project-card *,
+	#project-card *::before,
+	#project-card *::after {
 		box-sizing: border-box;
+		max-width: 100%;
 	}
 
-	/* 3. Always enable scrolling on page-2 */
-	.popup-page.page-details {
-		overflow-y: auto;
-		/* if you want a little inner padding: */
-		padding: 1rem;
+  #card-title {
+    margin-top: 10%
+  }
+
+	#project-card .mobile-card-image {
+		display: block; /* allow margin auto */
+		width: 100%; /* fill the padded area exactly */
+		height: auto; /* preserve aspect ratio */
+		margin: 16px auto 24px; /* vertical spacing + auto horizontal centering */
 	}
-} /* end desktop media query */
 
-/* Hide the Mapbox/MapLibre popup wrapper and its default content box */
-.mapboxgl-popup,
-.maplibregl-popup {
-	background: transparent !important;
-	box-shadow: none !important;
-	padding: 0 !important;
-}
-
-/* Hide the built-in content container so only your .project-popup shows */
-.mapboxgl-popup-content,
-.maplibregl-popup-content {
-	background: transparent !important;
-	box-shadow: none !important;
-	padding: 0 !important;
-	border: none !important;
+	/* Offset the divider a bit from the left */
+	#project-card .popup-divider {
+		width: 60%;
+		height: 1px;
+		background-color: #ddd; /* or whatever line color you use */
+	}
 }

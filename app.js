@@ -11,7 +11,6 @@ const map = new maptilersdk.Map({
 	geolocateControl: false,
 });
 
-window.map = map;
 
 map.on("load", () => {
 	const isMobile = window.innerWidth < 768;
@@ -173,11 +172,10 @@ map.on("load", () => {
 					card.className = "city-card";
 
 					/* ---------- build the project-specific narrative ---------- */
-					const amount = props["ARPA funds narrative"]; // already formatted string like “8,000,000.00”
+					const amount = props["Amount ARPA obligated"]; // already formatted string like “8,000,000.00”
 					const spent = props["% ARPA spent by 24"]; // e.g. “43.12%”
 					const narrative = `
-									Roanoke obligated <span class="arpa-narrative-highlight">${amount}</span>
-									dollars of its ARPA funds to this project. 
+									Roanoke obligated <span class="arpa-narrative-highlight">$${amount}</span> of its ARPA funds to this project. 
 									By the end of 2024, it had spent 
 									<span class="arpa-narrative-highlight">${spent}</span> of that amount.
 									`;
@@ -241,15 +239,14 @@ map.on("load", () => {
 
 					const title = props["Project title"];
 					const description = props["Description"];
-					const arpaAmount = props["ARPA funds narrative"]; // already formatted
+					const arpaAmount = props["Amount ARPA obligated"]; // already formatted
 					const spent = props["% ARPA spent by 24"];
 					const img_url = props["image_url"];
 					const cityBudget = props["Amount city funds budgeted"]; // raw number or null
 
 					/* ---------- build narrative ---------- */
 					let narrative = `
-    Roanoke obligated <span class="arpa-narrative-highlight">${arpaAmount}</span>
-    dollars of its ARPA funds to this project.
+    Roanoke obligated <span class="arpa-narrative-highlight">$${arpaAmount}</span> of its ARPA funds to this project.
     By the end of 2024, it had spent
     <span class="arpa-narrative-highlight">${spent}</span> of that amount.
   `;
@@ -283,15 +280,15 @@ map.on("load", () => {
 					document.getElementById("project-card").classList.remove("visible");
 					if (desktopPopup) desktopPopup.remove();
 
-					const arpaAmount = props["ARPA funds narrative"];
+					const arpaAmount = props["Amount ARPA obligated"];
 					const spent = props["% ARPA spent by 24"];
 					const description = props["Description"];
 					const img_url = props["image_url"];
 					const cityBudget = props["Amount city funds budgeted"];
 
 					let narrative = `
-    Roanoke obligated <span class="arpa-narrative-highlight">${arpaAmount}</span>
-    dollars of its ARPA funds to this project.
+    Roanoke obligated <span class="arpa-narrative-highlight">$${arpaAmount}</span>
+    of its ARPA funds to this project.
     By the end of 2024, it had spent
     <span class="arpa-narrative-highlight">${spent}</span> of that amount.
   `;
@@ -310,9 +307,9 @@ map.on("load", () => {
   <div class="project-card-desktop">
     <h3 class="pc-title">${props["Project title"]}</h3>
     <hr class="pc-divider" />
+	<img class="pc-image" src="${img_url}" alt="${props["Project title"]}" />
     <p class="pc-description">${description}</p>
     <p class="pc-narrative">${narrative}</p>
-    <img class="pc-image" src="${img_url}" alt="${props["Project title"]}" />
   </div>`;
 
 					desktopPopup = new maptilersdk.Popup({
@@ -386,43 +383,3 @@ map.on("load", () => {
 	});
 });
 
-console.log(
-	map
-		.getStyle()
-		.layers.filter((l) => l.type === "line" && l.id.includes("road"))
-		.map((l) => l.id)
-);
-
-
-/* ─── Once the style finishes loading, recolour highways to white ─── */
-map.once("idle", () => {
-  const WHITE = "#ffffff";
-
-  // examine every layer in the style
-  map.getStyle().layers.forEach((layer) => {
-    /* MapTiler Light names:
-       road-motorway-case   (orange casing)
-       road-motorway
-       road-trunk-case
-       road-trunk
-       road-primary-case
-       road-primary
-       … plus dash variants like road-motorway-link, etc.
-    */
-    const id = layer.id;
-
-    const isHighway =
-      id.startsWith("road-motorway") ||
-      id.startsWith("road-trunk") ||
-      id.startsWith("road-primary") ||
-      id.startsWith("road-secondary");
-
-    if (layer.type === "line" && isHighway) {
-      map.setPaintProperty(id, "line-color", WHITE);
-      // If the style has separate "casing" layers, set them too:
-      if (map.getPaintProperty(id, "line-color") !== WHITE) {
-        map.setPaintProperty(id, "line-color", WHITE);
-      }
-    }
-  });
-});

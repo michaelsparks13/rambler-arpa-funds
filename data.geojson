@@ -11,7 +11,7 @@
 			"properties": {
 				"Project title": "Salaries for city employees working on ARPA grants",
 				"Description": "The U.S. Treasury allows cities to use ARPA funds to cover costs to administer ARPA projects.",
-				"Amount ARPA obligated": "11,399,055.97",
+				"Amount ARPA obligated": "11,400,000",
 				"ARPA funds narrative": "11.4 million",
 				"Amount city funds budgeted": null,
 				"City funds narrative": null,
@@ -80,7 +80,7 @@
 			"properties": {
 				"Project title": "Affordable housing and social services",
 				"Description": "Habitat for Humanity built or rehabbed 18 homes to be affordable ($4,238,294.34). Total Action for Progress (TAP) received $570,685 to acquire and rehab homes for permanent supportive housing. Projects were focused in the Blemon-Fallon Target Area of Southeast Roanoke.",
-				"Amount ARPA obligated": "4,808,979.34",
+				"Amount ARPA obligated": "4,800,00",
 				"ARPA funds narrative": "4.8 million",
 				"Amount city funds budgeted": null,
 				"City funds narrative": null,
@@ -103,7 +103,7 @@
 			"properties": {
 				"Project title": "Lost revenue",
 				"Description": "This funding covers many miscellaneous expenses that the city incurred as a result of the pandemic emergency. The U.S. Treasury provides a calculation but also allows cities to use $10 million for this designation without proving a loss of revenue.",
-				"Amount ARPA obligated": "4,054,308.47",
+				"Amount ARPA obligated": "4,000,000",
 				"ARPA funds narrative": "over 4 million",
 				"Amount city funds budgeted": null,
 				"City funds narrative": null,
@@ -123,9 +123,9 @@
 			"properties": {
 				"Project title": "In-river kayak park",
 				"Description": "This project will expand outdoor recreation opportunities. The city says more people than ever sought out such opportunies during the pandemic.",
-				"Amount ARPA obligated": "3,129,391",
+				"Amount ARPA obligated": "3,000,000",
 				"ARPA funds narrative": "3.13 million",
-				"Amount city funds budgeted": 3032990,
+				"Amount city funds budgeted": 3000000,
 				"City funds narrative": "over three million",
 				"ARPA spent by end of 24?": "374,218.35",
 				"Address": "37Â°16'03.2\"N 79Â°57'47.9\"W",
@@ -146,7 +146,7 @@
 			"properties": {
 				"Project title": "New housing for homeless people",
 				"Description": "This program will create housing units to serve those facing homelessness and provide supportive services. Homelessness numbers increased after the onset of Covid-19.",
-				"Amount ARPA obligated": "2,873,108.81",
+				"Amount ARPA obligated": "2,900,000",
 				"ARPA funds narrative": "2.9 million",
 				"Amount city funds budgeted": null,
 				"City funds narrative": null,
@@ -189,9 +189,9 @@
 			"properties": {
 				"Project title": "Gainsboro neighborhood upgrades",
 				"Description": "Neighborhood upgrades will add bike lanes and pedestrian crossing signals to Gainsboro Road; provide homeowner improvement grants; and create a playground and public space. The city notes the neighborhood was ravaged by urban renewal and, as a low-income area, has been disproportionately impacted by the pandemic. Initial plans for a health clinic and small business development center in Gainsboro were abandoned.",
-				"Amount ARPA obligated": "2,341,075",
+				"Amount ARPA obligated": "2,300,000",
 				"ARPA funds narrative": "2.3 million",
-				"Amount city funds budgeted": 2658925,
+				"Amount city funds budgeted": 2659000,
 				"City funds narrative": "2.65 million",
 				"ARPA spent by end of 24?": "41,000",
 				"Address": "37Â°16'40.2\"N 79Â°56'30.1\"W",
@@ -212,7 +212,7 @@
 			"properties": {
 				"Project title": "MetroFLX",
 				"Description": "This project extends city bus service by providing on-demand late night and Sunday microtransit. The pandemic prompted a drop-off in those using public transit.",
-				"Amount ARPA obligated": "2,245,243.34",
+				"Amount ARPA obligated": "2,240,000",
 				"ARPA funds narrative": "2.25 million",
 				"Amount city funds budgeted": null,
 				"City funds narrative": null,
@@ -232,7 +232,7 @@
 			"properties": {
 				"Project title": "Outdoor park maintenance",
 				"Description": "Covers improvements to public parks aimed to promote health and safety.",
-				"Amount ARPA obligated": "1,968,788.14",
+				"Amount ARPA obligated": "2,000,000",
 				"ARPA funds narrative": "almost 2 million",
 				"Amount city funds budgeted": null,
 				"City funds narrative": null,
@@ -252,7 +252,7 @@
 			"properties": {
 				"Project title": "Workforce development program",
 				"Description": "The Greater Roanoke Workforce Development Board was tasked with administering the Star City Works program, devoted to pairing high-growth employers with trained employees.",
-				"Amount ARPA obligated": "1,816,179.35",
+				"Amount ARPA obligated": "1,800,000",
 				"ARPA funds narrative": "1.8 million",
 				"Amount city funds budgeted": null,
 				"City funds narrative": null,
@@ -272,7 +272,7 @@
 			"properties": {
 				"Project title": "Creating NW and SE leaders TK ",
 				"Description": null,
-				"Amount ARPA obligated": "1,652,839.75",
+				"Amount ARPA obligated": "1,650,000",
 				"ARPA funds narrative": "1.65 million",
 				"Amount city funds budgeted": null,
 				"City funds narrative": null,
@@ -292,7 +292,7 @@
 			"properties": {
 				"Project title": "Gun violence initiatives, including police overtime pay",
 				"Description": "Gun violence spiked during the pandemic. Funding went to a youth and gang violence prevention unit; Gun Violence Prevention Commission grants and programs; police bonuses and overtime; and other initiatives.",
-				"Amount ARPA obligated": "1,651,063.36",
+				"Amount ARPA obligated": "1,650,000",
 				"ARPA funds narrative": "1.65 million",
 				"Amount city funds budgeted": null,
 				"City funds narrative": null,
@@ -335,7 +335,7 @@
 			"properties": {
 				"Project title": "Downtown parking facility upgrades",
 				"Description": "Improvements to parking structures will help create a sense of safety and draw visitor back downtown, according to the city. The pandemic prompted a rapid decline in downtown visitors.",
-				"Amount ARPA obligated": "884,442.50",
+				"Amount ARPA obligated": "884,000",
 				"ARPA funds narrative": "884 thousand",
 				"Amount city funds budgeted": null,
 				"City funds narrative": null,
@@ -381,7 +381,7 @@
 			"properties": {
 				"Project title": "Cash transfers to households for utility bills",
 				"Description": "Funding helped 636 households to cover electric bills, car payments and medical bills that went unpaid becuase of the pandemic.",
-				"Amount ARPA obligated": "497,043.21",
+				"Amount ARPA obligated": "500,000",
 				"ARPA funds narrative": "nearly half a million",
 				"Amount city funds budgeted": null,
 				"City funds narrative": null,
@@ -401,7 +401,7 @@
 			"properties": {
 				"Project title": "Grants for substance abuse programs",
 				"Description": "Grants supported organizations whose projects treated, prevented or responded to substance abuse issues.",
-				"Amount ARPA obligated": "445,100",
+				"Amount ARPA obligated": "445,000",
 				"ARPA funds narrative": "almost 450 thousand",
 				"Amount city funds budgeted": null,
 				"City funds narrative": null,
@@ -421,7 +421,7 @@
 			"properties": {
 				"Project title": "Permanent supportive housing for homeless",
 				"Description": "Commonwealth Catholic Charities proposed to provide permanent housing and supportive services to 41 households experiencing homelessness.",
-				"Amount ARPA obligated": "390,600",
+				"Amount ARPA obligated": "390,000",
 				"ARPA funds narrative": "nearly 400 thousand",
 				"Amount city funds budgeted": null,
 				"City funds narrative": null,
@@ -464,7 +464,7 @@
 			"properties": {
 				"Project title": "Creating Northwest and Southeast community leaders",
 				"Description": "Service providers and resident leaders met with the goal to empower residents to improve neighborhood health outcomes.",
-				"Amount ARPA obligated": "281,500",
+				"Amount ARPA obligated": "280,000",
 				"ARPA funds narrative": "over 280 thousand",
 				"Amount city funds budgeted": null,
 				"City funds narrative": null,
@@ -484,7 +484,7 @@
 			"properties": {
 				"Project title": "Financial Empowerment Center",
 				"Description": "The center provides financial counseling for those experiencing hardships resulting from the pandemic.",
-				"Amount ARPA obligated": "268,887.03",
+				"Amount ARPA obligated": "270,000",
 				"ARPA funds narrative": "nearly 270 thousand",
 				"Amount city funds budgeted": null,
 				"City funds narrative": null,
@@ -530,7 +530,7 @@
 			"properties": {
 				"Project title": "Tree planting",
 				"Description": "Focused on Census tracts with less tree coverage, this project will improve air and water quality and reduce energy costs.",
-				"Amount ARPA obligated": "230,609",
+				"Amount ARPA obligated": "230,000",
 				"ARPA funds narrative": "over 230 thousand",
 				"Amount city funds budgeted": null,
 				"City funds narrative": null,
@@ -596,7 +596,7 @@
 			"properties": {
 				"Project title": "Taubman Museum of Art",
 				"Description": "Money earmarked for technology improvements for greater spacing of on-site gatherings and production of content for off-site viewing.",
-				"Amount ARPA obligated": "75,700",
+				"Amount ARPA obligated": "75,000",
 				"ARPA funds narrative": "over 75 thousand",
 				"Amount city funds budgeted": null,
 				"City funds narrative": null,
@@ -642,7 +642,7 @@
 			"properties": {
 				"Project title": "City employee health clinic overtime pay",
 				"Description": "The health clinic was responsible for contact tracing for city employees who tested positive for the Covid-19 virus.",
-				"Amount ARPA obligated": "29,250",
+				"Amount ARPA obligated": "29,000",
 				"ARPA funds narrative": "thirty thousand",
 				"Amount city funds budgeted": null,
 				"City funds narrative": null,
