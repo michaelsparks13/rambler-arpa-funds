@@ -452,6 +452,7 @@ a,
 	line-height: 1.25;
 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
 	max-width: 150px; /* keeps it compact on mobile */
+  cursor: pointer;
 }
 
 .legend-row {
@@ -526,7 +527,7 @@ a,
 	}
 
 	#project-card {
-		width: 90%;
+		width: 80%;
 		left: 50%;
 		bottom: 0;
 		transform: translate(-50%, 100%); /* 100 % => slide just below view  */
