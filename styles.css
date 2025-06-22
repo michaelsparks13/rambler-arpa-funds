@@ -476,7 +476,6 @@ a,
 }
 
 #legend-toggle {
-	display: none; /* hidden by default (desktop) */
 	padding: 0.25rem 0.7rem;
 	font-size: 0.8rem;
 	background: #0d6b30;

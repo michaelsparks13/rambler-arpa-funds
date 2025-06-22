@@ -131,10 +131,8 @@ map.on("load", () => {
 					"Outer ring shows additional city dollars where applicable.";
 				legendBody.appendChild(note);
 
-				/* ---- collapse on phones ---- */
-				if (window.matchMedia("(max-width: 600px)").matches) {
-					legend.classList.add("collapsed"); // start closed
-				}
+				
+				legend.classList.add("collapsed"); // start closed
 
 				/* ---- toggle button ---- */
 				toggleBtn.addEventListener("click", () => {
