@@ -11,7 +11,6 @@ const map = new maptilersdk.Map({
 	geolocateControl: false,
 });
 
-
 map.on("load", () => {
 	const isMobile = window.innerWidth < 768;
 
@@ -123,7 +122,7 @@ map.on("load", () => {
 					)} M`;
 
 					row.append(circle, label);
-					legendBody.appendChild(row); // ⬅️  append to legendBody, not legend
+					legendBody.appendChild(row);
 				});
 
 				const note = document.createElement("div");
@@ -158,7 +157,7 @@ map.on("load", () => {
 					(b, c) => b.extend(c),
 					new maptilersdk.LngLatBounds(coords[0], coords[0])
 				);
-				map.fitBounds(bounds, { padding: 75, maxZoom: 14 });
+				map.fitBounds(bounds, { padding: 85, maxZoom: 14 });
 			}
 
 			// Populate the pull-up panel with city-wide (no-geometry) features
@@ -174,11 +173,24 @@ map.on("load", () => {
 					/* ---------- build the project-specific narrative ---------- */
 					const amount = props["Amount ARPA obligated"]; // already formatted string like “8,000,000.00”
 					const spent = props["% ARPA spent by 24"]; // e.g. “43.12%”
-					const narrative = `
+
+					if (
+						props["Project title"] ===
+						"Grants to arts and culture groups, nonprofits and small businesses"
+					) {
+						// do X
+						narrative = `
+									Roanoke obligated <span class="arpa-narrative-highlight">$${amount}</span> of its ARPA funds to these projects. 
+									By the end of 2024, it had spent 
+									<span class="arpa-narrative-highlight">${spent}</span> of that amount.
+									`;
+					} else {
+						narrative = `
 									Roanoke obligated <span class="arpa-narrative-highlight">$${amount}</span> of its ARPA funds to this project. 
 									By the end of 2024, it had spent 
 									<span class="arpa-narrative-highlight">${spent}</span> of that amount.
 									`;
+					}
 
 					/* ---------- inject full accordion markup ---------- */
 					card.innerHTML = `
@@ -243,18 +255,29 @@ map.on("load", () => {
 					const spent = props["% ARPA spent by 24"];
 					const img_url = props["image_url"];
 					const cityBudget = props["Amount city funds budgeted"]; // raw number or null
+					let narrative; 
 
-					/* ---------- build narrative ---------- */
-					let narrative = `
+					if (
+						props["Project title"] === "Affordable housing and social services"
+					) {
+						/* ---------- build narrative ---------- */
+						narrative = `
+    Roanoke obligated <span class="arpa-narrative-highlight">$${arpaAmount}</span> of its ARPA funds to these projects.
+    By the end of 2024, it had spent
+    <span class="arpa-narrative-highlight">${spent}</span> of that amount.
+  `;
+					} else {
+						/* ---------- build narrative ---------- */
+						narrative = `
     Roanoke obligated <span class="arpa-narrative-highlight">$${arpaAmount}</span> of its ARPA funds to this project.
     By the end of 2024, it had spent
     <span class="arpa-narrative-highlight">${spent}</span> of that amount.
   `;
+					}
 
 					if (cityBudget && Number(cityBudget) > 0) {
 						const formattedCity = Number(cityBudget).toLocaleString();
 						narrative += `
-      <br>
       In addition to the federal ARPA funds, the city budgeted
       <span class="city-narrative-highlight">$${formattedCity}</span>
       of its own money to this project, though it is unknown how much of that has been spent.
@@ -285,18 +308,33 @@ map.on("load", () => {
 					const description = props["Description"];
 					const img_url = props["image_url"];
 					const cityBudget = props["Amount city funds budgeted"];
+					let narrative;
 
-					let narrative = `
-    Roanoke obligated <span class="arpa-narrative-highlight">$${arpaAmount}</span>
-    of its ARPA funds to this project.
+					if (
+						props["Project title"] ===
+							"Grants to arts and culture groups, nonprofits and small businesses" ||
+						props["Project title"] === "Affordable housing and social services"
+					) {
+						console.log(props["Projec title"]);
+						/* ---------- build narrative ---------- */
+						narrative = `
+    Roanoke obligated <span class="arpa-narrative-highlight">$${arpaAmount}</span> of its ARPA funds to these projects.
     By the end of 2024, it had spent
     <span class="arpa-narrative-highlight">${spent}</span> of that amount.
   `;
+					} else {
+						/* ---------- build narrative ---------- */
+						narrative = `
+    Roanoke obligated <span class="arpa-narrative-highlight">$${arpaAmount}</span> of its ARPA funds to this project.
+    By the end of 2024, it had spent
+    <span class="arpa-narrative-highlight">${spent}</span> of that amount.
+  `;
+					}
 
 					if (cityBudget && Number(cityBudget) > 0) {
 						const formattedCity = Number(cityBudget).toLocaleString();
 						narrative += `
-      <br>
+      
       In addition to the federal ARPA funds, the city budgeted
       <span class="city-narrative-highlight">$${formattedCity}</span>
       of its own money to this project, though it is unknown how much of that has been spent.
@@ -316,10 +354,13 @@ map.on("load", () => {
 						offset: [-1, -5],
 						closeButton: false,
 						closeOnClick: true,
+						className: "arpa-popup", 
+						maxWidth: "none",
 					})
 						.setLngLat(coords)
 						.setHTML(html)
 						.addTo(map);
+
 
 					// ─── Grab your popup elements ──────────────────────────────────────
 					const popupEl = desktopPopup
@@ -382,4 +423,3 @@ map.on("load", () => {
 		panel.classList.toggle("open");
 	});
 });
-

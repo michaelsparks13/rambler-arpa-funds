@@ -127,8 +127,7 @@ a,
 
 .project-card h2,
 .project-card p {
-	width: 60%;
-	margin-left: 20%;
+	width: 100%;
 }
 
 .project-card p {
@@ -215,23 +214,51 @@ a,
 	font-size: 1.25rem;
 	color: #1a1a1a;
 	line-height: 1.5;
-	margin: 0.5rem 1rem 1rem;
 }
+
 
 /* ─── Desktop popup as card (rev 2) ────────────────────────── */
 .project-card-desktop {
-	max-width: 500px; /* 1⃣  wider than the old 320 px  */
-	max-height: 30vh; /* 3⃣  cap height at 70 % viewport */
+	width: 100%;
+	max-height: 40vh; /* 3⃣  cap height at 70 % viewport */
 	overflow-y: auto; /*     add native scroll bar       */
 	background: #f7f7f7; /*     same soft gray              */
 	border-radius: 8px;
-	padding: 1rem 1.25rem;
+	padding: 2rem 1.5rem;
 	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 
 	/* 2⃣  inherit the same base sizes used in the mobile drawer */
-	font-size: 1rem; /* mobile body size               */
-	line-height: 1.45;
+	font-size: 1.25rem; /* mobile body size               */
+	line-height: 1.25;
 }
+
+
+.maplibregl-popup-content {
+  max-width: none !important;
+  width: 30vw       !important;   /* whatever viewport % you want */
+  box-sizing: border-box;         /* so padding doesn’t blow you out */
+}
+/* and allow the wrapper to expand */
+.maplibregl-popup {
+  max-width: none !important;
+}
+
+/* target only your ARPA popups: */
+.arpa-popup .maplibregl-popup-content {
+  padding: 0 !important;
+  max-width: none    !important;
+  width:    30vw     !important;  /* or whatever you want */
+  box-sizing: border-box;
+}
+
+/* make sure your card fills that space: */
+.arpa-popup .project-card-desktop {
+  width: 100% !important;
+}
+.maplibregl-popup-tip {
+  left: calc(50% - 10px) !important;
+}
+
 
 /* optional: slim, subtle scroll-bar (WebKit & Chromium) */
 .project-card-desktop::-webkit-scrollbar {
@@ -244,7 +271,7 @@ a,
 
 .pc-title {
 	margin: 0 0 0.35rem;
-	font-size: 1.2rem; /* mobile heading size            */
+	font-size: 1.3rem; /* mobile heading size            */
 	line-height: 1.2;
 }
 
@@ -257,6 +284,7 @@ a,
 .pc-description,
 .pc-narrative {
 	margin: 0 0 1rem;
+  line-height: 1.45;
 }
 
 .pc-image {
@@ -272,10 +300,10 @@ a,
 	position: absolute;
 	bottom: 0;
 	left: 50%;
-	transform: translate(-50%, calc(85%)); /* show 60px: arrow + title */
+	transform: translate(-50%, calc(90%)); /* show 60px: arrow + title */
 	width: 90%;
 	max-width: 500px;
-	height: 50vh;
+	height: 90vh;
 	background: #fff;
 	border-top-left-radius: 8px;
 	border-top-right-radius: 8px;
@@ -311,7 +339,7 @@ a,
 	font-size: 14px;
 	font-weight: bold;
 	color: #333;
-	line-height: 1.2;
+	line-height: 1.25;
 }
 
 /* scrollable content */
@@ -345,6 +373,7 @@ a,
 
 .city-card.expanded {
 	max-height: 1000px;
+	line-height: 1.5;
 }
 
 .city-card.expanded .card-extra {
@@ -355,7 +384,7 @@ a,
 
 .card-extra p {
 	font-size: 1.25rem;
-	line-height: 1.2;
+	line-height: 1.25;
 }
 
 .card-extra img {
@@ -368,10 +397,10 @@ a,
 
 .city-card h3 {
 	margin: 0 0 4px;
-	font-size: 1.3rem;
+	font-size: 1.25rem;
 }
 .city-card p {
-	font-size: 1.4rem;
+	font-size: 1.25rem;
 	line-height: 1.25;
 }
 
@@ -403,8 +432,7 @@ a,
 
 #card-narrative,
 .mobile-card-details {
-	text-align: justify;
-	line-height: 1.3;
+	text-align: left;
 }
 
 #card-details {
@@ -477,9 +505,9 @@ a,
 		overflow: hidden;
 	}
 
-	.map-title {
-		font-size: 1.2rem;
-	}
+  p {
+    line-height: 1.5 !important;
+  }
 
 	#funds-legend {
 		top: 3%;
@@ -487,7 +515,7 @@ a,
 		bottom: auto;
 		left: auto;
 		padding: 0.5rem 0.6rem;
-    margin: 10px;
+		margin: 10px;
 	}
 
 	#legend-toggle {
@@ -499,11 +527,27 @@ a,
 	}
 
 	#project-card {
-		width: 100%;
-		max-width: 100%;
-		padding: 0 24px; /* match your desired horizontal inset */
-		box-sizing: border-box; /* include that padding in the width calculation */
-		overflow-x: hidden; /* cut off any overflowing children */
+		width: 90%;
+		left: 50%;
+		bottom: 0;
+		transform: translate(-50%, 100%); /* 100 % => slide just below view  */
+		opacity: 0;
+		pointer-events: none; /* ignore taps while hidden        */
+
+		/* your visual styles */
+		background: #f7f7f7;
+		border-radius: 8px;
+		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+		padding: 1rem 1.25rem;
+		transition: transform 0.3s ease, opacity 0.3s ease;
+	}
+
+
+	/* shown after JS adds .visible */
+	#project-card.visible {
+		transform: translate(-50%, 0); /* slide up into view             */
+		opacity: 1;
+		pointer-events: auto;
 	}
 
 	/* ensure your text container has the same horizontal padding */
@@ -516,7 +560,7 @@ a,
 		text-align: center;
 		width: 90%;
 		margin: 0 auto;
-    margin-top: 5%;
+		margin-top: 5%;
 	}
 
 	#project-card *,
@@ -526,9 +570,9 @@ a,
 		max-width: 100%;
 	}
 
-  #card-title {
-    margin-top: 10%
-  }
+	#card-title {
+		margin-top: 10%;
+	}
 
 	#project-card .mobile-card-image {
 		display: block; /* allow margin auto */

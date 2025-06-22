@@ -313,7 +313,7 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"Project title": "Grants to arts/culture groups, nonprofits and small businesses",
+				"Project title": "Grants to arts and culture groups, nonprofits and small businesses",
 				"Description": "Funds helped arts and cultural organizations disrupted by the pandemic ($580,500); nonprofits that saw increased demand for services ($410,500); Economic Development Authority grants to small businesses ($370,000); and cultural organizations for facility upgrades ($25,000).",
 				"Amount ARPA obligated": "1,386,000",
 				"ARPA funds narrative": "1.39 nillion",
@@ -618,7 +618,7 @@
 			"type": "Feature",
 			"properties": {
 				"Project title": "Grandin Theatre ",
-				"Description": "Money earmarked for HVAC improvements and other repairs",
+				"Description": "Money earmarked for HVAC improvements and other repairs.",
 				"Amount ARPA obligated": "68,500",
 				"ARPA funds narrative": "70 thousand",
 				"Amount city funds budgeted": null,
