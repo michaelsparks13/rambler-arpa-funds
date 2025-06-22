@@ -563,6 +563,13 @@ a,
 		margin-top: 5%;
 	}
 
+#card-title {
+  /* leave room for the 32px button + 16px margin */
+  padding-right: 50px;
+  box-sizing: border-box;  /* so padding doesn’t overflow */
+}
+
+
 	#project-card *,
 	#project-card *::before,
 	#project-card *::after {
