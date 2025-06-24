@@ -102,8 +102,8 @@
 			"type": "Feature",
 			"properties": {
 				"Project title": "Lost revenue",
-				"Description": "This funding covers many miscellaneous expenses that the city incurred as a result of the pandemic emergency. The U.S. Treasury provides a calculation but also allows cities to use $10 million for this designation without proving a loss of revenue. $250,000 went to The Twelve Foundation, which supports residential substance abuse recovery and $160,900 went to eviction prevention assistance.",
-				"Amount ARPA obligated": "4,054,308.47",
+				"Description": "This funding covers many miscellaneous expenses that the city incurred as a result of the pandemic emergency. The U.S. Treasury provides a calculation but also allows cities to use $10 million for this designation without proving a loss of revenue. $250,000 went to The Twelve Foundation, which supports residential substance abuse recovery and $160,900 went to eviction prevention assistance. The city categorized an additional $3 million as lost revenue, which went to Riverdale water and sewer infrastructure.",
+				"Amount ARPA obligated": "1,054,308.47",
 				"ARPA funds narrative": "over 4 million",
 				"Amount city funds budgeted": null,
 				"City funds narrative": null,
@@ -330,7 +330,7 @@
 			},
 			"geometry": {
 				"type": "Point",
-				"coordinates": [-79.940557865169296, 37.271892228098501]
+				"coordinates": [-79.9395368468329, 37.27290090514556]
 			}
 		},
 		{
@@ -643,8 +643,8 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"Project title": "Western Virginia Water Authority",
-				"Description": "The city said in June 2025 that funding went to the Western Virginia Water Authority for water and sewer infrastructure improvements at Riverdale. The city categorized this expense as lost revenue, for a total of $4 million in that category",
+				"Project title": "Riverdale water/sewer infrastructure",
+				"Description": "The city said in June 2025 that funding went to the Western Virginia Water Authority for water and sewer infrastructure improvements at Riverdale. The city categorized this expense as lost revenue, for a total of $4 million in that category.",
 				"Amount ARPA obligated": "3,000,000",
 				"ARPA funds narrative": "70 thousand",
 				"Amount city funds budgeted": null,
