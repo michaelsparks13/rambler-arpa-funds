@@ -251,7 +251,7 @@
 			"type": "Feature",
 			"properties": {
 				"Project title": "Workforce development program",
-				"Description": "The city tasked the Greater Roanoke Workforce Development Board with administering the Star City Works program, devoted to pairing high-growth employers with trained employees.",
+				"Description": "The city tasked the Greater Roanoke Workforce Development Board with administering the Star City Works program, devoted to pairing high-growth employers with trained employees. The city said in June 2025 that there was $1.5 million left unspent from the Star City Works Program. The city claimed that as lost revenue replacement for city-funded projects in qualified census tracts, such as the Gainsboro hub and building upgrades at the Belmont Branch Library.",
 				"Amount ARPA obligated": "1,816,179.35",
 				"ARPA funds narrative": "1.8 million",
 				"Amount city funds budgeted": null,
@@ -523,8 +523,11 @@
 				"image_url": "ARPA-photos/26-tree-planting.jpg",
 				"Subrecipient": null
 			},
-			"geometry": { "type": "Point", "coordinates": [-79.96644351045798, 37.293223026828464] }
-		}, 
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-79.96644351045798, 37.293223026828464]
+			}
+		},
 		{
 			"type": "Feature",
 			"properties": {
@@ -636,6 +639,29 @@
 				"Subrecipient": "Marathon Health"
 			},
 			"geometry": null
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Project title": "Western Virginia Water Authority",
+				"Description": "The city said in June 2025 that funding went to the Western Virginia Water Authority for water and sewer infrastructure improvements at Riverdale.",
+				"Amount ARPA obligated": "3,000,000",
+				"ARPA funds narrative": "70 thousand",
+				"Amount city funds budgeted": null,
+				"City funds narrative": null,
+				"ARPA spent by end of 24?": "68,500",
+				"Address": null,
+				"Lat": "37.255031",
+				"Lon": "-79.921828",
+				"City fund sent by end of 24": null,
+				"% ARPA spent by 24": "100%",
+				"image_url": "ARPA-photos/riverdale-peterson-aerial.jpg",
+				"Subrecipient": "Grandin Theatre"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-79.921828, 37.255031]
+			}
 		}
 	]
 }
