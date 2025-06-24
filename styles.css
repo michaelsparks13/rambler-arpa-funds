@@ -594,4 +594,12 @@ a,
 		height: 1px;
 		background-color: #ddd; /* or whatever line color you use */
 	}
+
+	/* override MapLibre/MapTiler attribution size */
+.maplibregl-ctrl-attrib {
+  font-size: 5px !important;
+  line-height: 1.2;
+  opacity: 0.8;
+}
+
 }

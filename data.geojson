@@ -79,7 +79,7 @@
 			"type": "Feature",
 			"properties": {
 				"Project title": "Affordable housing and social services",
-				"Description": "Habitat for Humanity built or rehabbed 18 homes to be affordable ($4,238,294.34). Total Action for Progress (TAP) received $570,685 to acquire and rehab homes for permanent supportive housing. Projects were focused in the Blemon-Fallon Target Area of Southeast Roanoke.",
+				"Description": "Habitat for Humanity built or rehabbed 18 homes to be affordable ($4,238,294.34). Total Action for Progress (TAP) received $570,685 to acquire and rehab homes for permanent supportive housing. Projects were focused in the Belmont-Fallon Target Area of Southeast Roanoke.",
 				"Amount ARPA obligated": "4,808,979.34",
 				"ARPA funds narrative": "4.8 million",
 				"Amount city funds budgeted": null,
@@ -188,7 +188,7 @@
 			"type": "Feature",
 			"properties": {
 				"Project title": "Gainsboro neighborhood upgrades",
-				"Description": "Neighborhood upgrades will add bike lanes and pedestrian crossing signals to Gainsboro Road; provide homeowner improvement grants; and create a playground and public space. The city notes the neighborhood was ravaged by urban renewal and, as a low-income area, has been disproportionately impacted by the pandemic. Initial plans for a health clinic and small business development center in Gainsboro were abandoned.",
+				"Description": "Neighborhood upgrades will add bike lanes and pedestrian crossing signals to Gainsboro Road; provide homeowner improvement grants; and create a playground and public space. The city notes the neighborhood was ravaged by urban renewal and, as a low-income area, has been disproportionately impacted by the pandemic. The city abandoned initial plans for a health clinic and small business development center in Gainsboro.",
 				"Amount ARPA obligated": "2,341,075",
 				"ARPA funds narrative": "2.3 million",
 				"Amount city funds budgeted": 2659000,
@@ -231,7 +231,7 @@
 			"type": "Feature",
 			"properties": {
 				"Project title": "Outdoor park maintenance",
-				"Description": "Covers improvements to public parks aimed to promote health and safety.",
+				"Description": "Improvements to public parks aimed to promote health and safety.",
 				"Amount ARPA obligated": "1,968,788.14",
 				"ARPA funds narrative": "almost 2 million",
 				"Amount city funds budgeted": null,
@@ -251,7 +251,7 @@
 			"type": "Feature",
 			"properties": {
 				"Project title": "Workforce development program",
-				"Description": "The Greater Roanoke Workforce Development Board was tasked with administering the Star City Works program, devoted to pairing high-growth employers with trained employees.",
+				"Description": "The city tasked the Greater Roanoke Workforce Development Board with administering the Star City Works program, devoted to pairing high-growth employers with trained employees.",
 				"Amount ARPA obligated": "1,816,179.35",
 				"ARPA funds narrative": "1.8 million",
 				"Amount city funds budgeted": null,
@@ -264,26 +264,6 @@
 				"% ARPA spent by 24": "100%",
 				"image_url": "ARPA-photos/13-workforce.jpg",
 				"Subrecipient": "Workforce Development Board"
-			},
-			"geometry": null
-		},
-		{
-			"type": "Feature",
-			"properties": {
-				"Project title": "Creating NW and SE leaders TK ",
-				"Description": null,
-				"Amount ARPA obligated": "1,652,839.75",
-				"ARPA funds narrative": "1.65 million",
-				"Amount city funds budgeted": null,
-				"City funds narrative": null,
-				"ARPA spent by end of 24?": "0",
-				"Address": null,
-				"Lat": null,
-				"Lon": null,
-				"City fund sent by end of 24": null,
-				"% ARPA spent by 24": "0%",
-				"image_url": "ARPA-photos/14-neighborhoods-feature.jpg",
-				"Subrecipient": null
 			},
 			"geometry": null
 		},
@@ -324,7 +304,7 @@
 				"Lat": null,
 				"Lon": null,
 				"City fund sent by end of 24": null,
-				"% ARPA spent by 24": "42%",
+				"% ARPA spent by 24": "100%",
 				"image_url": "ARPA-photos/16-arts-biz-grants.jpg",
 				"Subrecipient": null
 			},
