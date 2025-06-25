@@ -303,7 +303,7 @@ a,
 	transform: translate(-50%, calc(90%)); /* show 60px: arrow + title */
 	width: 90%;
 	max-width: 500px;
-	height: 70vh;
+	height: 80vh;
 	background: #fff;
 	border-top-left-radius: 8px;
 	border-top-right-radius: 8px;
